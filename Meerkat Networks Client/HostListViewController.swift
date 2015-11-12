@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HostListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HostListViewController: UITableViewController {
 
     @IBOutlet var tableViewHosts: UITableView!
     
@@ -21,8 +21,6 @@ class HostListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        let nib = UINib(nibName: "HostListCell", bundle: nil)
-//        tableViewHosts.registerNib(nib, forCellReuseIdentifier: "cell")
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,21 +29,24 @@ class HostListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    func tableView(tableViewHosts: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableViewHosts: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.hostNames.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell 	{
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableViewHosts: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> HostListCell 	{
         // work
-        let cell:HostListCell = self.tableViewHosts.dequeueReusableCellWithIdentifier("cell") as! HostListCell
-        
+        let cell = tableViewHosts.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! HostListCell
         cell.labelHost.text = hostNames[indexPath.row]
         cell.labelIp.text = hostIps[indexPath.row]
         cell.labelDate.text = hostDates[indexPath.row]
         if hostStatuses[indexPath.row] {
-            cell.labelConnected.text = "Connected"
+            cell.labelIsConnected.text = "Connected"
         } else {
-            cell.labelConnected.text = "Disconnected"
+            cell.labelIsConnected.text = "Disconnected"
         }
         //cell.icon.image = UIImage(named: "check")
         

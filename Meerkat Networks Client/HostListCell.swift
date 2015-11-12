@@ -11,7 +11,7 @@ import UIKit
 class HostListCell: UITableViewCell {
     
     @IBOutlet weak var labelHost: UILabel!
-    @IBOutlet weak var labelConnected: UILabel!
+    @IBOutlet weak var labelIsConnected: UILabel!
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelIp: UILabel!
     
