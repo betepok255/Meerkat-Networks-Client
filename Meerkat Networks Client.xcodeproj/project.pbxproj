@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10C1BF4DD690069C0DE /* AppDelegate.swift */; };
-		5663E10F1BF4DD690069C0DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10E1BF4DD690069C0DE /* ViewController.swift */; };
+		5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10E1BF4DD690069C0DE /* LoginViewController.swift */; };
 		5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1101BF4DD690069C0DE /* Main.storyboard */; };
 		5663E1141BF4DD690069C0DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1131BF4DD690069C0DE /* Assets.xcassets */; };
 		5663E1171BF4DD690069C0DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1151BF4DD690069C0DE /* LaunchScreen.storyboard */; };
 		5663E1221BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E1211BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift */; };
 		5663E12D1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */; };
+		5663E13B1BF4DDF40069C0DE /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E13A1BF4DDF40069C0DE /* HostListViewController.swift */; };
+		5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E13D1BF4E2800069C0DE /* HostListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meerkat Networks Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663E10C1BF4DD690069C0DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5663E10E1BF4DD690069C0DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5663E10E1BF4DD690069C0DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5663E1111BF4DD690069C0DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5663E1131BF4DD690069C0DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5663E1161BF4DD690069C0DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		5663E1281BF4DD690069C0DE /* Meerkat Networks ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meerkat Networks ClientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meerkat_Networks_ClientUITests.swift; sourceTree = "<group>"; };
 		5663E12E1BF4DD690069C0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5663E13A1BF4DDF40069C0DE /* HostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListViewController.swift; sourceTree = "<group>"; };
+		5663E13D1BF4E2800069C0DE /* HostListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		5663E10B1BF4DD690069C0DE /* Meerkat Networks Client */ = {
 			isa = PBXGroup;
 			children = (
+				5663E13C1BF4E26B0069C0DE /* Cells */,
+				5663E1181BF4DD690069C0DE /* Info.plist */,
 				5663E10C1BF4DD690069C0DE /* AppDelegate.swift */,
-				5663E10E1BF4DD690069C0DE /* ViewController.swift */,
-				5663E1101BF4DD690069C0DE /* Main.storyboard */,
+				5663E13A1BF4DDF40069C0DE /* HostListViewController.swift */,
+				5663E10E1BF4DD690069C0DE /* LoginViewController.swift */,
 				5663E1131BF4DD690069C0DE /* Assets.xcassets */,
 				5663E1151BF4DD690069C0DE /* LaunchScreen.storyboard */,
-				5663E1181BF4DD690069C0DE /* Info.plist */,
+				5663E1101BF4DD690069C0DE /* Main.storyboard */,
 			);
 			path = "Meerkat Networks Client";
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				5663E12E1BF4DD690069C0DE /* Info.plist */,
 			);
 			path = "Meerkat Networks ClientUITests";
+			sourceTree = "<group>";
+		};
+		5663E13C1BF4E26B0069C0DE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5663E13D1BF4E2800069C0DE /* HostListCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5663E10F1BF4DD690069C0DE /* ViewController.swift in Sources */,
+				5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */,
+				5663E13B1BF4DDF40069C0DE /* HostListViewController.swift in Sources */,
 				5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */,
+				5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
