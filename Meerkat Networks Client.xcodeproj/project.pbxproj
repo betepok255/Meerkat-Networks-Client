@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10C1BF4DD690069C0DE /* AppDelegate.swift */; };
+		5663E10F1BF4DD690069C0DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10E1BF4DD690069C0DE /* ViewController.swift */; };
+		5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1101BF4DD690069C0DE /* Main.storyboard */; };
+		5663E1141BF4DD690069C0DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1131BF4DD690069C0DE /* Assets.xcassets */; };
+		5663E1171BF4DD690069C0DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1151BF4DD690069C0DE /* LaunchScreen.storyboard */; };
+		5663E1221BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E1211BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift */; };
+		5663E12D1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5663E11E1BF4DD690069C0DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5663E1011BF4DD690069C0DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5663E1081BF4DD690069C0DE;
+			remoteInfo = "Meerkat Networks Client";
+		};
+		5663E1291BF4DD690069C0DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5663E1011BF4DD690069C0DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5663E1081BF4DD690069C0DE;
+			remoteInfo = "Meerkat Networks Client";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meerkat Networks Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5663E10C1BF4DD690069C0DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5663E10E1BF4DD690069C0DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5663E1111BF4DD690069C0DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5663E1131BF4DD690069C0DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5663E1161BF4DD690069C0DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5663E1181BF4DD690069C0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5663E11D1BF4DD690069C0DE /* Meerkat Networks ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meerkat Networks ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5663E1211BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meerkat_Networks_ClientTests.swift; sourceTree = "<group>"; };
+		5663E1231BF4DD690069C0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5663E1281BF4DD690069C0DE /* Meerkat Networks ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meerkat Networks ClientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meerkat_Networks_ClientUITests.swift; sourceTree = "<group>"; };
+		5663E12E1BF4DD690069C0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5663E1061BF4DD690069C0DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5663E11A1BF4DD690069C0DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5663E1251BF4DD690069C0DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5663E1001BF4DD690069C0DE = {
+			isa = PBXGroup;
+			children = (
+				5663E10B1BF4DD690069C0DE /* Meerkat Networks Client */,
+				5663E1201BF4DD690069C0DE /* Meerkat Networks ClientTests */,
+				5663E12B1BF4DD690069C0DE /* Meerkat Networks ClientUITests */,
+				5663E10A1BF4DD690069C0DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5663E10A1BF4DD690069C0DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */,
+				5663E11D1BF4DD690069C0DE /* Meerkat Networks ClientTests.xctest */,
+				5663E1281BF4DD690069C0DE /* Meerkat Networks ClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5663E10B1BF4DD690069C0DE /* Meerkat Networks Client */ = {
+			isa = PBXGroup;
+			children = (
+				5663E10C1BF4DD690069C0DE /* AppDelegate.swift */,
+				5663E10E1BF4DD690069C0DE /* ViewController.swift */,
+				5663E1101BF4DD690069C0DE /* Main.storyboard */,
+				5663E1131BF4DD690069C0DE /* Assets.xcassets */,
+				5663E1151BF4DD690069C0DE /* LaunchScreen.storyboard */,
+				5663E1181BF4DD690069C0DE /* Info.plist */,
+			);
+			path = "Meerkat Networks Client";
+			sourceTree = "<group>";
+		};
+		5663E1201BF4DD690069C0DE /* Meerkat Networks ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				5663E1211BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift */,
+				5663E1231BF4DD690069C0DE /* Info.plist */,
+			);
+			path = "Meerkat Networks ClientTests";
+			sourceTree = "<group>";
+		};
+		5663E12B1BF4DD690069C0DE /* Meerkat Networks ClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */,
+				5663E12E1BF4DD690069C0DE /* Info.plist */,
+			);
+			path = "Meerkat Networks ClientUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5663E1081BF4DD690069C0DE /* Meerkat Networks Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5663E1311BF4DD690069C0DE /* Build configuration list for PBXNativeTarget "Meerkat Networks Client" */;
+			buildPhases = (
+				5663E1051BF4DD690069C0DE /* Sources */,
+				5663E1061BF4DD690069C0DE /* Frameworks */,
+				5663E1071BF4DD690069C0DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Meerkat Networks Client";
+			productName = "Meerkat Networks Client";
+			productReference = 5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5663E11C1BF4DD690069C0DE /* Meerkat Networks ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5663E1341BF4DD690069C0DE /* Build configuration list for PBXNativeTarget "Meerkat Networks ClientTests" */;
+			buildPhases = (
+				5663E1191BF4DD690069C0DE /* Sources */,
+				5663E11A1BF4DD690069C0DE /* Frameworks */,
+				5663E11B1BF4DD690069C0DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5663E11F1BF4DD690069C0DE /* PBXTargetDependency */,
+			);
+			name = "Meerkat Networks ClientTests";
+			productName = "Meerkat Networks ClientTests";
+			productReference = 5663E11D1BF4DD690069C0DE /* Meerkat Networks ClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5663E1271BF4DD690069C0DE /* Meerkat Networks ClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5663E1371BF4DD690069C0DE /* Build configuration list for PBXNativeTarget "Meerkat Networks ClientUITests" */;
+			buildPhases = (
+				5663E1241BF4DD690069C0DE /* Sources */,
+				5663E1251BF4DD690069C0DE /* Frameworks */,
+				5663E1261BF4DD690069C0DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5663E12A1BF4DD690069C0DE /* PBXTargetDependency */,
+			);
+			name = "Meerkat Networks ClientUITests";
+			productName = "Meerkat Networks ClientUITests";
+			productReference = 5663E1281BF4DD690069C0DE /* Meerkat Networks ClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5663E1011BF4DD690069C0DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Meerkat Networks";
+				TargetAttributes = {
+					5663E1081BF4DD690069C0DE = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					5663E11C1BF4DD690069C0DE = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 5663E1081BF4DD690069C0DE;
+					};
+					5663E1271BF4DD690069C0DE = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 5663E1081BF4DD690069C0DE;
+					};
+				};
+			};
+			buildConfigurationList = 5663E1041BF4DD690069C0DE /* Build configuration list for PBXProject "Meerkat Networks Client" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5663E1001BF4DD690069C0DE;
+			productRefGroup = 5663E10A1BF4DD690069C0DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5663E1081BF4DD690069C0DE /* Meerkat Networks Client */,
+				5663E11C1BF4DD690069C0DE /* Meerkat Networks ClientTests */,
+				5663E1271BF4DD690069C0DE /* Meerkat Networks ClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5663E1071BF4DD690069C0DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5663E1171BF4DD690069C0DE /* LaunchScreen.storyboard in Resources */,
+				5663E1141BF4DD690069C0DE /* Assets.xcassets in Resources */,
+				5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5663E11B1BF4DD690069C0DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5663E1261BF4DD690069C0DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5663E1051BF4DD690069C0DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5663E10F1BF4DD690069C0DE /* ViewController.swift in Sources */,
+				5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5663E1191BF4DD690069C0DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5663E1221BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5663E1241BF4DD690069C0DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5663E12D1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5663E11F1BF4DD690069C0DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5663E1081BF4DD690069C0DE /* Meerkat Networks Client */;
+			targetProxy = 5663E11E1BF4DD690069C0DE /* PBXContainerItemProxy */;
+		};
+		5663E12A1BF4DD690069C0DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5663E1081BF4DD690069C0DE /* Meerkat Networks Client */;
+			targetProxy = 5663E1291BF4DD690069C0DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5663E1101BF4DD690069C0DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5663E1111BF4DD690069C0DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5663E1151BF4DD690069C0DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5663E1161BF4DD690069C0DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5663E12F1BF4DD690069C0DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5663E1301BF4DD690069C0DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5663E1321BF4DD690069C0DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Meerkat Networks Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Meerkat-Networks.Meerkat-Networks-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5663E1331BF4DD690069C0DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Meerkat Networks Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Meerkat-Networks.Meerkat-Networks-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5663E1351BF4DD690069C0DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Meerkat Networks ClientTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Meerkat-Networks.Meerkat-Networks-ClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meerkat Networks Client.app/Meerkat Networks Client";
+			};
+			name = Debug;
+		};
+		5663E1361BF4DD690069C0DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Meerkat Networks ClientTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Meerkat-Networks.Meerkat-Networks-ClientTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meerkat Networks Client.app/Meerkat Networks Client";
+			};
+			name = Release;
+		};
+		5663E1381BF4DD690069C0DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Meerkat Networks ClientUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Meerkat-Networks.Meerkat-Networks-ClientUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Meerkat Networks Client";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5663E1391BF4DD690069C0DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Meerkat Networks ClientUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Meerkat-Networks.Meerkat-Networks-ClientUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Meerkat Networks Client";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5663E1041BF4DD690069C0DE /* Build configuration list for PBXProject "Meerkat Networks Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5663E12F1BF4DD690069C0DE /* Debug */,
+				5663E1301BF4DD690069C0DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5663E1311BF4DD690069C0DE /* Build configuration list for PBXNativeTarget "Meerkat Networks Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5663E1321BF4DD690069C0DE /* Debug */,
+				5663E1331BF4DD690069C0DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5663E1341BF4DD690069C0DE /* Build configuration list for PBXNativeTarget "Meerkat Networks ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5663E1351BF4DD690069C0DE /* Debug */,
+				5663E1361BF4DD690069C0DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5663E1371BF4DD690069C0DE /* Build configuration list for PBXNativeTarget "Meerkat Networks ClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5663E1381BF4DD690069C0DE /* Debug */,
+				5663E1391BF4DD690069C0DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5663E1011BF4DD690069C0DE /* Project object */;
+}
