@@ -20,6 +20,15 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func OnClickLoginButton(sender: AnyObject) {
+        
+        let next = self.storyboard?.instantiateViewControllerWithIdentifier("HomeRootViewController") as! HomeRootViewController
+        self.presentViewController(next, animated: true, completion: nil)
+        
+//        let initialViewController = UIStoryboard(name: "Main", bundle:nil).instantiateInitialViewController() as! HomeRootViewController
+//        let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//        appDelegate.window?.rootViewController = initialViewController
+    }
 
 }
 

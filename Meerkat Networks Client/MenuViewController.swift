@@ -41,10 +41,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-//        let initialViewController = UIStoryboard(name: "Main", bundle:nil).instantiateInitialViewController() as! UIViewController
+        
+        let next = self.storyboard?.instantiateViewControllerWithIdentifier("EARootViewController") as! EARootViewController
+        self.presentViewController(next, animated: false, completion: nil)
+        
+//        let initialViewController = UIStoryboard(name: "Main", bundle:nil).instantiateInitialViewController() as! EARootViewController
 //        let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
 //        appDelegate.window?.rootViewController = initialViewController
-//        
+//
 //        switch indexPath.row{
 //        case 1:
 //            break
@@ -52,13 +56,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 //            break
 //        }
         
-//        let nvc = self.mainNavigationController()
-        if let hamburguerViewController = self.findHamburguerViewController() {
-            hamburguerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
-//                nvc.visibleViewController!.performSegueWithIdentifier(self.segues[indexPath.row], sender: nil)
-//                hamburguerViewController.contentViewController = nvc
-            })
-        }
+////        let nvc = self.mainNavigationController()
+//        if let hamburguerViewController = self.findHamburguerViewController() {
+//            hamburguerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
+////                nvc.visibleViewController!.performSegueWithIdentifier(self.segues[indexPath.row], sender: nil)
+////                hamburguerViewController.contentViewController = nvc
+//            })
+//        }
     }
     
     // MARK: - Navigation
