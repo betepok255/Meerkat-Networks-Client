@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		563B6F7C1BF5065B00FF8719 /* HostListNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B6F7B1BF5065B00FF8719 /* HostListNewViewController.swift */; };
 		5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10C1BF4DD690069C0DE /* AppDelegate.swift */; };
 		5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10E1BF4DD690069C0DE /* LoginViewController.swift */; };
 		5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1101BF4DD690069C0DE /* Main.storyboard */; };
@@ -15,8 +14,15 @@
 		5663E1171BF4DD690069C0DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1151BF4DD690069C0DE /* LaunchScreen.storyboard */; };
 		5663E1221BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E1211BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift */; };
 		5663E12D1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */; };
-		5663E13B1BF4DDF40069C0DE /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E13A1BF4DDF40069C0DE /* HostListViewController.swift */; };
 		5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E13D1BF4E2800069C0DE /* HostListCell.swift */; };
+		56DA40221BF77E9700FB65D5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */; };
+		56DA40231BF77E9700FB65D5 /* HomeRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401D1BF77E9700FB65D5 /* HomeRootViewController.swift */; };
+		56DA40241BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */; };
+		56DA40251BF77E9700FB65D5 /* DLHamburguerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401F1BF77E9700FB65D5 /* DLHamburguerNavigationController.swift */; };
+		56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */; };
+		56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */; };
+		56DA40331BF795E800FB65D5 /* EARootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40321BF795E800FB65D5 /* EARootViewController.swift */; };
+		56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40341BF79C1B00FB65D5 /* EAIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		563B6F7B1BF5065B00FF8719 /* HostListNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListNewViewController.swift; sourceTree = "<group>"; };
 		5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meerkat Networks Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663E10C1BF4DD690069C0DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5663E10E1BF4DD690069C0DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -51,8 +56,15 @@
 		5663E1281BF4DD690069C0DE /* Meerkat Networks ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meerkat Networks ClientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meerkat_Networks_ClientUITests.swift; sourceTree = "<group>"; };
 		5663E12E1BF4DD690069C0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5663E13A1BF4DDF40069C0DE /* HostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListViewController.swift; sourceTree = "<group>"; };
 		5663E13D1BF4E2800069C0DE /* HostListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListCell.swift; sourceTree = "<group>"; };
+		56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		56DA401D1BF77E9700FB65D5 /* HomeRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRootViewController.swift; sourceTree = "<group>"; };
+		56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerContainerViewController.swift; sourceTree = "<group>"; };
+		56DA401F1BF77E9700FB65D5 /* DLHamburguerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerNavigationController.swift; sourceTree = "<group>"; };
+		56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerViewController.swift; sourceTree = "<group>"; };
+		56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListViewController.swift; sourceTree = "<group>"; };
+		56DA40321BF795E800FB65D5 /* EARootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EARootViewController.swift; sourceTree = "<group>"; };
+		56DA40341BF79C1B00FB65D5 /* EAIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAIndex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +115,22 @@
 		5663E10B1BF4DD690069C0DE /* Meerkat Networks Client */ = {
 			isa = PBXGroup;
 			children = (
-				5663E13C1BF4E26B0069C0DE /* Cells */,
-				5663E1181BF4DD690069C0DE /* Info.plist */,
-				5663E10C1BF4DD690069C0DE /* AppDelegate.swift */,
-				5663E13A1BF4DDF40069C0DE /* HostListViewController.swift */,
-				5663E10E1BF4DD690069C0DE /* LoginViewController.swift */,
+				56DA40281BF77EB000FB65D5 /* Menu */,
+				56DA40271BF77E9F00FB65D5 /* Login */,
+				56DA401A1BF77E1600FB65D5 /* Home */,
+				56DA402C1BF78FB000FB65D5 /* External Audit */,
+				56DA402D1BF78FC500FB65D5 /* Internal Audit */,
+				56DA40361BF79C5500FB65D5 /* Web Security */,
+				56DA40371BF79C6200FB65D5 /* Database Security */,
+				56DA40381BF79C6B00FB65D5 /* Monitoring */,
+				56DA40391BF79C7400FB65D5 /* Support */,
+				56DA403A1BF79C7E00FB65D5 /* Settings */,
+				56DA403B1BF79C8D00FB65D5 /* API */,
 				5663E1131BF4DD690069C0DE /* Assets.xcassets */,
-				5663E1151BF4DD690069C0DE /* LaunchScreen.storyboard */,
 				5663E1101BF4DD690069C0DE /* Main.storyboard */,
-				563B6F7B1BF5065B00FF8719 /* HostListNewViewController.swift */,
+				5663E10C1BF4DD690069C0DE /* AppDelegate.swift */,
+				5663E1181BF4DD690069C0DE /* Info.plist */,
+				5663E1151BF4DD690069C0DE /* LaunchScreen.storyboard */,
 			);
 			path = "Meerkat Networks Client";
 			sourceTree = "<group>";
@@ -134,12 +153,92 @@
 			path = "Meerkat Networks ClientUITests";
 			sourceTree = "<group>";
 		};
-		5663E13C1BF4E26B0069C0DE /* Cells */ = {
+		56DA401A1BF77E1600FB65D5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				56DA401D1BF77E9700FB65D5 /* HomeRootViewController.swift */,
+				56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */,
 				5663E13D1BF4E2800069C0DE /* HostListCell.swift */,
 			);
-			name = Cells;
+			name = Home;
+			sourceTree = "<group>";
+		};
+		56DA40271BF77E9F00FB65D5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5663E10E1BF4DD690069C0DE /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		56DA40281BF77EB000FB65D5 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */,
+				56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */,
+				56DA401F1BF77E9700FB65D5 /* DLHamburguerNavigationController.swift */,
+				56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		56DA402C1BF78FB000FB65D5 /* External Audit */ = {
+			isa = PBXGroup;
+			children = (
+				56DA40321BF795E800FB65D5 /* EARootViewController.swift */,
+				56DA40341BF79C1B00FB65D5 /* EAIndex.swift */,
+			);
+			name = "External Audit";
+			sourceTree = "<group>";
+		};
+		56DA402D1BF78FC500FB65D5 /* Internal Audit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Internal Audit";
+			sourceTree = "<group>";
+		};
+		56DA40361BF79C5500FB65D5 /* Web Security */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Web Security";
+			sourceTree = "<group>";
+		};
+		56DA40371BF79C6200FB65D5 /* Database Security */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Database Security";
+			sourceTree = "<group>";
+		};
+		56DA40381BF79C6B00FB65D5 /* Monitoring */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Monitoring;
+			sourceTree = "<group>";
+		};
+		56DA40391BF79C7400FB65D5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		56DA403A1BF79C7E00FB65D5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		56DA403B1BF79C8D00FB65D5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +372,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */,
 				5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */,
-				563B6F7C1BF5065B00FF8719 /* HostListNewViewController.swift in Sources */,
-				5663E13B1BF4DDF40069C0DE /* HostListViewController.swift in Sources */,
+				56DA40251BF77E9700FB65D5 /* DLHamburguerNavigationController.swift in Sources */,
+				56DA40241BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift in Sources */,
+				56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */,
+				56DA40331BF795E800FB65D5 /* EARootViewController.swift in Sources */,
+				56DA40231BF77E9700FB65D5 /* HomeRootViewController.swift in Sources */,
+				56DA40221BF77E9700FB65D5 /* MenuViewController.swift in Sources */,
 				5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */,
+				56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */,
 				5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
