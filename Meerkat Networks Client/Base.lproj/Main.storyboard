@@ -289,10 +289,10 @@
             </objects>
             <point key="canvasLocation" x="-1076" y="-1241"/>
         </scene>
-        <!--Root View Controller-->
+        <!--EARootViewController-->
         <scene sceneID="4yd-oh-NbD">
             <objects>
-                <viewController id="h4T-Bg-039" customClass="EARootViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="EARootViewController" id="h4T-Bg-039" customClass="EARootViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ef7-Pi-YtG"/>
                         <viewControllerLayoutGuide type="bottom" id="8uO-7e-RyD"/>
@@ -320,12 +320,105 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gwV-uD-CJH" kind="relationship" relationship="rootViewController" id="khs-HY-XLs"/>
+                        <segue destination="DBl-Gc-Fsv" kind="relationship" relationship="rootViewController" id="LHv-sE-ifa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjf-zE-k2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1076" y="-325"/>
+        </scene>
+        <!--Scan Host-->
+        <scene sceneID="NXW-yw-0gI">
+            <objects>
+                <viewController title="Scan Host" id="CeI-7O-AfT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RUk-Ps-Fph"/>
+                        <viewControllerLayoutGuide type="bottom" id="keN-Na-WYQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4TB-cb-Qg1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1M-bN-QDu">
+                                <rect key="frame" x="261" y="290" width="79" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r1M-bN-QDu" firstAttribute="centerY" secondItem="4TB-cb-Qg1" secondAttribute="centerY" id="5Ym-7E-EtB"/>
+                            <constraint firstItem="r1M-bN-QDu" firstAttribute="centerX" secondItem="4TB-cb-Qg1" secondAttribute="centerX" id="oBx-qq-EVb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan Host" id="Oyt-Kc-bmn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Buj-DN-DRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927" y="-325"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="o5p-lB-Zx9">
+            <objects>
+                <viewController title="History" id="Nd2-de-Al2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RcW-yB-Hav"/>
+                        <viewControllerLayoutGuide type="bottom" id="BjC-fk-V1N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xxB-TZ-iYt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyb-Lg-p1P">
+                                <rect key="frame" x="273" y="290" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gyb-Lg-p1P" firstAttribute="centerY" secondItem="xxB-TZ-iYt" secondAttribute="centerY" id="5zF-SO-j9v"/>
+                            <constraint firstItem="gyb-Lg-p1P" firstAttribute="centerX" secondItem="xxB-TZ-iYt" secondAttribute="centerX" id="aKj-zH-70F"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="History" id="G5i-Bg-OKN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NV7-9i-q0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261" y="-659"/>
+        </scene>
+        <!--External Audit-->
+        <scene sceneID="qcC-Uv-8Ls">
+            <objects>
+                <tabBarController id="DBl-Gc-Fsv" customClass="EAIndexViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="External Audit" id="ROc-c0-bOH">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="94x-iD-glz">
+                            <connections>
+                                <action selector="menuButtonTouched:" destination="DBl-Gc-Fsv" id="7QX-5Y-9eD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="rvh-Kc-7Zd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Nd2-de-Al2" kind="relationship" relationship="viewControllers" id="gZf-N0-Htj"/>
+                        <segue destination="CeI-7O-AfT" kind="relationship" relationship="viewControllers" id="rQ2-bu-gE2"/>
+                        <segue destination="mlS-SC-zbi" kind="relationship" relationship="viewControllers" id="axG-u7-yYg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMY-oj-Ncj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="-325"/>
         </scene>
         <!--Host List-->
         <scene sceneID="LFy-jb-qHG">
@@ -364,7 +457,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Uu-8r-cI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-345" y="-325"/>
+            <point key="canvasLocation" x="475" y="-1029"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="TCQ-wz-Nbf">
+            <objects>
+                <viewController title="Settings" id="mlS-SC-zbi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zrR-Nx-VfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ai-om-mtp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cPd-Hz-UCG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOW-z8-bgt">
+                                <rect key="frame" x="268" y="290" width="64" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fOW-z8-bgt" firstAttribute="centerY" secondItem="cPd-Hz-UCG" secondAttribute="centerY" id="JeT-ve-8ZN"/>
+                            <constraint firstItem="fOW-z8-bgt" firstAttribute="centerX" secondItem="cPd-Hz-UCG" secondAttribute="centerX" id="wRa-xc-vBZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="PE7-6y-1t4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hd3-Ur-Tw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261" y="32"/>
         </scene>
     </scenes>
 </document>

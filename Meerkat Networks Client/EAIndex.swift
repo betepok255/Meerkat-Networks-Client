@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EAIndexViewController: UIViewController {
+class EAIndexViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,8 @@ class EAIndexViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func menuButtonTouched(sender: AnyObject) {
+        self.findHamburguerViewController()?.showMenuViewController()
+    }
     
 }
