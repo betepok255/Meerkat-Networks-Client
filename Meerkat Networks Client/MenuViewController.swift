@@ -14,7 +14,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     // data
-    let segues = ["Home", "option 2", "option 3"]
+    let segues = ["Home","ea"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,34 +39,39 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
-        let next = self.storyboard?.instantiateViewControllerWithIdentifier("EARootViewController") as! EARootViewController
-        self.presentViewController(next, animated: false, completion: nil)
-        
-//        let initialViewController = UIStoryboard(name: "Main", bundle:nil).instantiateInitialViewController() as! EARootViewController
-//        let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-//        appDelegate.window?.rootViewController = initialViewController
-//
-//        switch indexPath.row{
+//    func ChangeNavigationController(index: Int)
+//    {
+//        
+//        switch index{
 //        case 1:
+//            let next = self.storyboard?.instantiateViewControllerWithIdentifier("EARootViewController") as! EARootViewController
+//            self.presentViewController(next, animated: false, completion: nil)
 //            break
 //        case 2:
 //            break
+//        default: break;
+//        }
+//    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+//        if let hamburgerViewController = self.findHamburguerViewController() {
+//            self.ChangeNavigationController(indexPath.row)
+////            hamburgerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
+////                self.ChangeNavigationController(indexPath.row)
+////            })
 //        }
         
-////        let nvc = self.mainNavigationController()
-//        if let hamburguerViewController = self.findHamburguerViewController() {
-//            hamburguerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
-////                nvc.visibleViewController!.performSegueWithIdentifier(self.segues[indexPath.row], sender: nil)
-////                hamburguerViewController.contentViewController = nvc
-//            })
-//        }
+        let nvc = self.mainNavigationController()
+        if let hamburguerViewController = self.findHamburguerViewController() {
+            hamburguerViewController.hideMenuViewControllerWithCompletion({ () -> Void in
+                nvc.visibleViewController!.performSegueWithIdentifier(self.segues[indexPath.row], sender: nil)
+                hamburguerViewController.contentViewController = nvc
+            })
+        }
     }
     
-    // MARK: - Navigation
-    
+    // MARK: - Navigation    
     func mainNavigationController() -> DLHamburguerNavigationController {
         return self.storyboard?.instantiateViewControllerWithIdentifier("HostListNavigationViewController") as! DLHamburguerNavigationController
     }
