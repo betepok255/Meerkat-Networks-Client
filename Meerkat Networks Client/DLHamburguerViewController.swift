@@ -250,11 +250,8 @@ class DLHamburguerViewController: UIViewController {
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         // call super and inform delegate
-        if #available(iOS 8.0, *) {
-            super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-        } else {
-            // Fallback on earlier versions
-        }
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        
         delegate?.hamburguerViewController?(self, willTransitionToSize: size, withTransitionCoordinator: coordinator)
         // adjust menu size if visible
         coordinator.animateAlongsideTransition({ (context) -> Void in

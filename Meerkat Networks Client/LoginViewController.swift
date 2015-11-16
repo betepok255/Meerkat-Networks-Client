@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func OnClickLoginButton(sender: AnyObject) {
         
-        let next = self.storyboard?.instantiateViewControllerWithIdentifier("HomeRootViewController") as! HomeRootViewController
+        let next = self.storyboard?.instantiateViewControllerWithIdentifier("RootViewController") as! RootViewController
         self.presentViewController(next, animated: true, completion: nil)
         
 //        let initialViewController = UIStoryboard(name: "Main", bundle:nil).instantiateInitialViewController() as! HomeRootViewController

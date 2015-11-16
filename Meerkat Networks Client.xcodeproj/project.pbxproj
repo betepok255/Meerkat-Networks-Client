@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */; };
+		56290B0E1BFA24C00095BC3D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0D1BFA24C00095BC3D /* HistoryViewController.swift */; };
+		56290B101BFA26B20095BC3D /* HistoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0F1BFA26B20095BC3D /* HistoryListCell.swift */; };
+		56290B121BFA30360095BC3D /* SettingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B111BFA30360095BC3D /* SettingsListCell.swift */; };
+		56290B141BFA31750095BC3D /* ScanHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B131BFA31750095BC3D /* ScanHostViewController.swift */; };
+		56290B161BFA32C90095BC3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B151BFA32C90095BC3D /* SettingsViewController.swift */; };
+		56290B1A1BFA37EF0095BC3D /* AutoscanSettingsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B191BFA37EF0095BC3D /* AutoscanSettingsTable.swift */; };
 		5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10C1BF4DD690069C0DE /* AppDelegate.swift */; };
 		5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10E1BF4DD690069C0DE /* LoginViewController.swift */; };
 		5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1101BF4DD690069C0DE /* Main.storyboard */; };
@@ -16,12 +23,11 @@
 		5663E12D1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */; };
 		5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E13D1BF4E2800069C0DE /* HostListCell.swift */; };
 		56DA40221BF77E9700FB65D5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */; };
-		56DA40231BF77E9700FB65D5 /* HomeRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401D1BF77E9700FB65D5 /* HomeRootViewController.swift */; };
+		56DA40231BF77E9700FB65D5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401D1BF77E9700FB65D5 /* RootViewController.swift */; };
 		56DA40241BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */; };
 		56DA40251BF77E9700FB65D5 /* DLHamburguerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401F1BF77E9700FB65D5 /* DLHamburguerNavigationController.swift */; };
 		56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */; };
 		56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */; };
-		56DA40331BF795E800FB65D5 /* EARootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40321BF795E800FB65D5 /* EARootViewController.swift */; };
 		56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40341BF79C1B00FB65D5 /* EAIndex.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAIndexViewController.swift; sourceTree = "<group>"; };
+		56290B0D1BFA24C00095BC3D /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		56290B0F1BFA26B20095BC3D /* HistoryListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryListCell.swift; sourceTree = "<group>"; };
+		56290B111BFA30360095BC3D /* SettingsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsListCell.swift; sourceTree = "<group>"; };
+		56290B131BFA31750095BC3D /* ScanHostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanHostViewController.swift; sourceTree = "<group>"; };
+		56290B151BFA32C90095BC3D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		56290B191BFA37EF0095BC3D /* AutoscanSettingsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoscanSettingsTable.swift; sourceTree = "<group>"; };
 		5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meerkat Networks Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663E10C1BF4DD690069C0DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5663E10E1BF4DD690069C0DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -58,12 +71,11 @@
 		5663E12E1BF4DD690069C0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5663E13D1BF4E2800069C0DE /* HostListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListCell.swift; sourceTree = "<group>"; };
 		56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		56DA401D1BF77E9700FB65D5 /* HomeRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRootViewController.swift; sourceTree = "<group>"; };
+		56DA401D1BF77E9700FB65D5 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerContainerViewController.swift; sourceTree = "<group>"; };
 		56DA401F1BF77E9700FB65D5 /* DLHamburguerNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerNavigationController.swift; sourceTree = "<group>"; };
 		56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerViewController.swift; sourceTree = "<group>"; };
 		56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListViewController.swift; sourceTree = "<group>"; };
-		56DA40321BF795E800FB65D5 /* EARootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EARootViewController.swift; sourceTree = "<group>"; };
 		56DA40341BF79C1B00FB65D5 /* EAIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAIndex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +168,7 @@
 		56DA401A1BF77E1600FB65D5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				56DA401D1BF77E9700FB65D5 /* HomeRootViewController.swift */,
+				56DA401D1BF77E9700FB65D5 /* RootViewController.swift */,
 				56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */,
 				5663E13D1BF4E2800069C0DE /* HostListCell.swift */,
 			);
@@ -185,8 +197,13 @@
 		56DA402C1BF78FB000FB65D5 /* External Audit */ = {
 			isa = PBXGroup;
 			children = (
-				56DA40321BF795E800FB65D5 /* EARootViewController.swift */,
+				56290B0D1BFA24C00095BC3D /* HistoryViewController.swift */,
+				56290B131BFA31750095BC3D /* ScanHostViewController.swift */,
+				56290B151BFA32C90095BC3D /* SettingsViewController.swift */,
+				56290B191BFA37EF0095BC3D /* AutoscanSettingsTable.swift */,
 				56DA40341BF79C1B00FB65D5 /* EAIndex.swift */,
+				56290B0F1BFA26B20095BC3D /* HistoryListCell.swift */,
+				56290B111BFA30360095BC3D /* SettingsListCell.swift */,
 			);
 			name = "External Audit";
 			sourceTree = "<group>";
@@ -194,6 +211,7 @@
 		56DA402D1BF78FC500FB65D5 /* Internal Audit */ = {
 			isa = PBXGroup;
 			children = (
+				56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */,
 			);
 			name = "Internal Audit";
 			sourceTree = "<group>";
@@ -375,13 +393,19 @@
 				56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */,
 				5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */,
 				56DA40251BF77E9700FB65D5 /* DLHamburguerNavigationController.swift in Sources */,
+				56290B121BFA30360095BC3D /* SettingsListCell.swift in Sources */,
+				56290B101BFA26B20095BC3D /* HistoryListCell.swift in Sources */,
+				56290B0E1BFA24C00095BC3D /* HistoryViewController.swift in Sources */,
 				56DA40241BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift in Sources */,
+				56290B161BFA32C90095BC3D /* SettingsViewController.swift in Sources */,
+				56290B1A1BFA37EF0095BC3D /* AutoscanSettingsTable.swift in Sources */,
+				56290B141BFA31750095BC3D /* ScanHostViewController.swift in Sources */,
 				56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */,
-				56DA40331BF795E800FB65D5 /* EARootViewController.swift in Sources */,
-				56DA40231BF77E9700FB65D5 /* HomeRootViewController.swift in Sources */,
+				56DA40231BF77E9700FB65D5 /* RootViewController.swift in Sources */,
 				56DA40221BF77E9700FB65D5 /* MenuViewController.swift in Sources */,
 				5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */,
 				56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */,
+				56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */,
 				5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

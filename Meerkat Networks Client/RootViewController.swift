@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeRootViewController: DLHamburguerViewController {
+class RootViewController: DLHamburguerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

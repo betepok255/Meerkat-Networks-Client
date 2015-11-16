@@ -319,11 +319,8 @@ class DLHamburguerContainerViewController: UIViewController {
     
     // iOS 8 Transition.
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        if #available(iOS 8.0, *) {
             super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-        } else {
-            // Fallback on earlier versions
-        }
+        
         self.fixLayoutWithDuration(coordinator.transitionDuration())
     }
     
