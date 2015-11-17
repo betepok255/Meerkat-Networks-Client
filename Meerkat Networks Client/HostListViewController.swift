@@ -22,6 +22,7 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,6 +42,8 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! HostListCell
         
+        cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
+        
         cell.labelHost.text = hostNames[indexPath.row]
         cell.labelIp.text = hostIps[indexPath.row]
         cell.labelDate.text = hostDates[indexPath.row]
@@ -59,3 +62,27 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
 }
+
+extension UIView {
+    func addBorderTop(size size: CGFloat, color: UIColor) {
+        addBorderUtility(x: 0, y: 0, width: frame.width, height: size, color: color)
+    }
+    func addBorderBottom(size size: CGFloat, color: UIColor) {
+        addBorderUtility(x: 0, y: frame.height - size, width: frame.width, height: size, color: color)
+    }
+    func addBorderLeft(size size: CGFloat, color: UIColor) {
+        addBorderUtility(x: 0, y: 0, width: size, height: frame.height, color: color)
+    }
+    func addBorderRight(size size: CGFloat, color: UIColor) {
+        addBorderUtility(x: frame.width - size, y: 0, width: size, height: frame.height, color: color)
+    }
+    private func addBorderUtility(x x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, color: UIColor) {
+        let border = CALayer()
+        border.backgroundColor = color.CGColor
+        border.frame = CGRect(x: x, y: y, width: width, height: height)
+        layer.addSublayer(border)
+    }
+}
+
+
+
