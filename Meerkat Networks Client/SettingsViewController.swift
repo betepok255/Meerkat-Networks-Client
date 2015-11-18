@@ -19,6 +19,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,6 +35,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! SettingsListCell
+        
+        cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
         
         cell.labelUrl.text = hostUrl[indexPath.row]
         cell.labelStatus.text = hostStatus[indexPath.row]

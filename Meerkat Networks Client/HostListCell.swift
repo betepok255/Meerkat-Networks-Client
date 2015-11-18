@@ -14,6 +14,7 @@ class HostListCell: UITableViewCell {
     @IBOutlet weak var labelIsConnected: UILabel!
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelIp: UILabel!
+    @IBOutlet weak var imageViewCheck: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

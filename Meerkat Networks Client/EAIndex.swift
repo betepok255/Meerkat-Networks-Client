@@ -9,10 +9,19 @@
 import UIKit
 
 class EAIndexViewController: UITabBarController {
+    @IBOutlet weak var EATabBar: UITabBar!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tabBar.items?[0].image = UIImage.fontAwesomeIconWithName(.History, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
+        self.tabBar.items?[1].image = UIImage.fontAwesomeIconWithName(.Search, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
+        self.tabBar.items?[2].image = UIImage.fontAwesomeIconWithName(.Cogs, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
+        
+        menuButton.image = UIImage.fontAwesomeIconWithName(.Bars, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
+
     }
     
     override func didReceiveMemoryWarning() {

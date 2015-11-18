@@ -14,6 +14,9 @@
 		56290B141BFA31750095BC3D /* ScanHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B131BFA31750095BC3D /* ScanHostViewController.swift */; };
 		56290B161BFA32C90095BC3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B151BFA32C90095BC3D /* SettingsViewController.swift */; };
 		56290B1A1BFA37EF0095BC3D /* AutoscanSettingsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B191BFA37EF0095BC3D /* AutoscanSettingsTable.swift */; };
+		56320EBF1BFCB06F0076CB7A /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56320EBB1BFCB06F0076CB7A /* Enum.swift */; };
+		56320EC01BFCB06F0076CB7A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56320EBD1BFCB06F0076CB7A /* FontAwesome.otf */; };
+		56320EC11BFCB06F0076CB7A /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56320EBE1BFCB06F0076CB7A /* FontAwesome.swift */; };
 		5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10C1BF4DD690069C0DE /* AppDelegate.swift */; };
 		5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10E1BF4DD690069C0DE /* LoginViewController.swift */; };
 		5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1101BF4DD690069C0DE /* Main.storyboard */; };
@@ -56,6 +59,10 @@
 		56290B131BFA31750095BC3D /* ScanHostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanHostViewController.swift; sourceTree = "<group>"; };
 		56290B151BFA32C90095BC3D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		56290B191BFA37EF0095BC3D /* AutoscanSettingsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoscanSettingsTable.swift; sourceTree = "<group>"; };
+		56320EBB1BFCB06F0076CB7A /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		56320EBC1BFCB06F0076CB7A /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
+		56320EBD1BFCB06F0076CB7A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		56320EBE1BFCB06F0076CB7A /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
 		5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meerkat Networks Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663E10C1BF4DD690069C0DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5663E10E1BF4DD690069C0DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +111,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56320EB91BFCB04D0076CB7A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				56320EBA1BFCB05E0076CB7A /* Font Awesome */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		56320EBA1BFCB05E0076CB7A /* Font Awesome */ = {
+			isa = PBXGroup;
+			children = (
+				56320EBB1BFCB06F0076CB7A /* Enum.swift */,
+				56320EBC1BFCB06F0076CB7A /* FontAwesome.h */,
+				56320EBD1BFCB06F0076CB7A /* FontAwesome.otf */,
+				56320EBE1BFCB06F0076CB7A /* FontAwesome.swift */,
+			);
+			name = "Font Awesome";
+			sourceTree = "<group>";
+		};
 		5663E1001BF4DD690069C0DE = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +153,7 @@
 		5663E10B1BF4DD690069C0DE /* Meerkat Networks Client */ = {
 			isa = PBXGroup;
 			children = (
+				56320EB91BFCB04D0076CB7A /* Assets */,
 				56DA40281BF77EB000FB65D5 /* Menu */,
 				56DA40271BF77E9F00FB65D5 /* Login */,
 				56DA401A1BF77E1600FB65D5 /* Home */,
@@ -365,6 +392,7 @@
 			files = (
 				5663E1171BF4DD690069C0DE /* LaunchScreen.storyboard in Resources */,
 				5663E1141BF4DD690069C0DE /* Assets.xcassets in Resources */,
+				56320EC01BFCB06F0076CB7A /* FontAwesome.otf in Resources */,
 				5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +432,8 @@
 				56DA40231BF77E9700FB65D5 /* RootViewController.swift in Sources */,
 				56DA40221BF77E9700FB65D5 /* MenuViewController.swift in Sources */,
 				5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */,
+				56320EBF1BFCB06F0076CB7A /* Enum.swift in Sources */,
+				56320EC11BFCB06F0076CB7A /* FontAwesome.swift in Sources */,
 				56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */,
 				56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */,
 				5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */,

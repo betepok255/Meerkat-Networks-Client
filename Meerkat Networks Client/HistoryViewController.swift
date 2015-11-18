@@ -9,8 +9,8 @@
 import UIKit
 
 class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
-    
     @IBOutlet weak var tableView: UITableView!
+    
     var hostUrl: [String] = ["Url 1", "Url 2"]
     var hostCritical: [String] = ["1", "0"]
     var hostInformational: [String] = ["0", "1"]
@@ -36,6 +36,8 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! HistoryListCell
+        
+        cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
         
         cell.labelUrl.text = hostUrl[indexPath.row]
         cell.labelCritical.text = hostCritical[indexPath.row]

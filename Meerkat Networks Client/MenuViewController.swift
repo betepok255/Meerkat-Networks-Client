@@ -12,35 +12,52 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileButton: UIButton!
     
     @IBAction func ProfileButtonClick(sender: AnyObject) {
         if activeMenu.elementsEqual(defaultMenu)
         {
             activeMenu = profileMenu
-            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Bottom)
+            activeIcons = profileMenuIcons
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Left)
+            profileButton.setTitle(String.fontAwesomeIconWithName(.CaretUp), forState: .Normal)
             
         } else {
             activeMenu = defaultMenu
-            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Top)
+            activeIcons = defaultMenuIcons
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Right)
+            profileButton.setTitle(String.fontAwesomeIconWithName(.CaretDown), forState: .Normal)
         }
     }
     
-    // data
-    let defaultMenu = ["Home","External Audit","Internal Audit"]
+    // defaultMenu
+    let defaultMenu = ["Home","External Audit","Internal Audit","Web Security","Database Security","Monitoring","Support","Settings"]
+    var defaultMenuIcons:[FontAwesome
+    ] = [FontAwesome.Home,FontAwesome.Upload,FontAwesome.Download,FontAwesome.FileTextO,FontAwesome.Database,FontAwesome.Tv,FontAwesome.Wechat,FontAwesome.Cogs]
     var defaultMenuSelection = 0
-    let profileMenu = ["Profile","Second"]
+    
+    // profileMenu
+    let profileMenu = ["Account Info","Change password","Switch account","Exit"]
+    var profileMenuIcons:[FontAwesome
+    ] = [FontAwesome.ListAlt,FontAwesome.Unlock,FontAwesome.Refresh,FontAwesome.SignOut]
     var profileMenuSelection = 0
     
+    // activeMenu
     var activeMenu = [""]
+    var activeIcons:[FontAwesome] = []
     
     override func viewDidLoad() {
         activeMenu = defaultMenu
+        activeIcons = defaultMenuIcons
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         let indexPath = NSIndexPath(forRow: 0, inSection: 0);
         self.tableView.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: UITableViewScrollPosition.None)
         self.tableView(self.tableView, didSelectRowAtIndexPath: indexPath)
+        
+        profileButton.titleLabel?.font = UIFont.fontAwesomeOfSize(20)
+        profileButton.setTitle(String.fontAwesomeIconWithName(FontAwesome.CaretDown), forState: .Normal)
         
     }
 
@@ -58,6 +75,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) 
         cell.textLabel?.text = activeMenu[indexPath.row]
+        cell.imageView?.image=UIImage.fontAwesomeIconWithName(activeIcons[indexPath.row], textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
         return cell
     }
     

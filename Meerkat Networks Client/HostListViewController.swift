@@ -11,6 +11,8 @@ import UIKit
 class HostListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     var hostNames: [String] = ["Host 1", "Host 2", "Host 3", "Host 4"]
     var hostIps: [String] = ["52.58.119.202","52.58.119.202","52.58.119.202","52.58.119.202"]
     var hostStatuses: [Bool] = [true,false,true,false]
@@ -23,6 +25,7 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         
+        menuButton.image = UIImage.fontAwesomeIconWithName(.Bars, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +55,8 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
         } else {
             cell.labelIsConnected.text = "Disconnected"
         }
-        //cell.icon.image = UIImage(named: "check")
+        cell.imageViewCheck.image = UIImage.fontAwesomeIconWithName(.Check, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
+
         
         return cell
     }
@@ -63,7 +67,7 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
     
 }
 
-extension UIView {
+public extension UIView {
     func addBorderTop(size size: CGFloat, color: UIColor) {
         addBorderUtility(x: 0, y: 0, width: frame.width, height: size, color: color)
     }
