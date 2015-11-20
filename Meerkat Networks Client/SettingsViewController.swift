@@ -14,6 +14,20 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     var hostUrl: [String] = ["Url 1", "Url 2"]
     var hostStatus: [String] = ["On", "Off"]
     
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    
+    @IBAction func doEdit(sender: AnyObject) {
+        
+        if (self.tableView.editing) {
+            editButton.title = "Edit"
+            self.tableView.setEditing(false, animated: true)
+//            self.tableView.s
+        } else {
+            editButton.title = "Done"
+            self.tableView.setEditing(true, animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,11 +41,9 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hostUrl.count
     }
-    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! SettingsListCell
@@ -42,6 +54,21 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.labelStatus.text = hostStatus[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            hostUrl.removeAtIndex(indexPath.row)
+            hostStatus.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
     }
     
 }

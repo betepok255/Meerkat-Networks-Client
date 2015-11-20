@@ -32,6 +32,8 @@
 		56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */; };
 		56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */; };
 		56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40341BF79C1B00FB65D5 /* EAIndex.swift */; };
+		56EAD1991BFF338C00168CDC /* WeektableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EAD1981BFF338C00168CDC /* WeektableCollectionViewCell.swift */; };
+		56F2FCA91BFE0A4B00F7AC00 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2FCA81BFE0A4B00F7AC00 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerViewController.swift; sourceTree = "<group>"; };
 		56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListViewController.swift; sourceTree = "<group>"; };
 		56DA40341BF79C1B00FB65D5 /* EAIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAIndex.swift; sourceTree = "<group>"; };
+		56EAD1981BFF338C00168CDC /* WeektableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeektableCollectionViewCell.swift; sourceTree = "<group>"; };
+		56F2FCA81BFE0A4B00F7AC00 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		56320EB91BFCB04D0076CB7A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				56F2FCA81BFE0A4B00F7AC00 /* Enums.swift */,
 				56320EBA1BFCB05E0076CB7A /* Font Awesome */,
 			);
 			name = Assets;
@@ -224,13 +229,10 @@
 		56DA402C1BF78FB000FB65D5 /* External Audit */ = {
 			isa = PBXGroup;
 			children = (
-				56290B0D1BFA24C00095BC3D /* HistoryViewController.swift */,
-				56290B131BFA31750095BC3D /* ScanHostViewController.swift */,
-				56290B151BFA32C90095BC3D /* SettingsViewController.swift */,
-				56290B191BFA37EF0095BC3D /* AutoscanSettingsTable.swift */,
 				56DA40341BF79C1B00FB65D5 /* EAIndex.swift */,
-				56290B0F1BFA26B20095BC3D /* HistoryListCell.swift */,
-				56290B111BFA30360095BC3D /* SettingsListCell.swift */,
+				56EAD1971BFF193600168CDC /* Scan Host */,
+				56F2FCCB1BFE1E3600F7AC00 /* Settings */,
+				56F2FCAA1BFE14E100F7AC00 /* History */,
 			);
 			name = "External Audit";
 			sourceTree = "<group>";
@@ -284,6 +286,50 @@
 			);
 			name = API;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		56EAD1971BFF193600168CDC /* Scan Host */ = {
+			isa = PBXGroup;
+			children = (
+				56290B131BFA31750095BC3D /* ScanHostViewController.swift */,
+			);
+			name = "Scan Host";
+			sourceTree = "<group>";
+		};
+		56EAD19A1BFF33F200168CDC /* Weektable */ = {
+			isa = PBXGroup;
+			children = (
+				56290B191BFA37EF0095BC3D /* AutoscanSettingsTable.swift */,
+				56EAD1981BFF338C00168CDC /* WeektableCollectionViewCell.swift */,
+			);
+			name = Weektable;
+			sourceTree = "<group>";
+		};
+		56EAD19B1BFF33FF00168CDC /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		56F2FCAA1BFE14E100F7AC00 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				56290B0D1BFA24C00095BC3D /* HistoryViewController.swift */,
+				56290B0F1BFA26B20095BC3D /* HistoryListCell.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		56F2FCCB1BFE1E3600F7AC00 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				56EAD19B1BFF33FF00168CDC /* Schedule */,
+				56EAD19A1BFF33F200168CDC /* Weektable */,
+				56290B151BFA32C90095BC3D /* SettingsViewController.swift */,
+				56290B111BFA30360095BC3D /* SettingsListCell.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,11 +466,13 @@
 			files = (
 				56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */,
 				5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */,
+				56F2FCA91BFE0A4B00F7AC00 /* Enums.swift in Sources */,
 				56DA40251BF77E9700FB65D5 /* DLHamburguerNavigationController.swift in Sources */,
 				56290B121BFA30360095BC3D /* SettingsListCell.swift in Sources */,
 				56290B101BFA26B20095BC3D /* HistoryListCell.swift in Sources */,
 				56290B0E1BFA24C00095BC3D /* HistoryViewController.swift in Sources */,
 				56DA40241BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift in Sources */,
+				56EAD1991BFF338C00168CDC /* WeektableCollectionViewCell.swift in Sources */,
 				56290B161BFA32C90095BC3D /* SettingsViewController.swift in Sources */,
 				56290B1A1BFA37EF0095BC3D /* AutoscanSettingsTable.swift in Sources */,
 				56290B141BFA31750095BC3D /* ScanHostViewController.swift in Sources */,

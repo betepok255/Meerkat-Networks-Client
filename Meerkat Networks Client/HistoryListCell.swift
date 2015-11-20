@@ -14,6 +14,7 @@ class HistoryListCell: UITableViewCell {
     @IBOutlet weak var labelCritical: UILabel!
     @IBOutlet weak var labelInformational: UILabel!
     @IBOutlet weak var labelDate: UILabel!
+    @IBOutlet weak var imageIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

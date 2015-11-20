@@ -10,6 +10,7 @@ import UIKit
 
 class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var hostUrl: [String] = ["Url 1", "Url 2"]
     var hostCritical: [String] = ["1", "0"]
@@ -21,6 +22,8 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        menuButton.image = UIImage.fontAwesomeIconWithName(.Bars, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,6 +31,9 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func menuButtonTouched(sender: AnyObject) {
+        self.findHamburguerViewController()?.showMenuViewController()
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hostUrl.count
@@ -41,8 +47,14 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         
         cell.labelUrl.text = hostUrl[indexPath.row]
         cell.labelCritical.text = hostCritical[indexPath.row]
+//        if hostCritical[indexPath.row] != "0" {
+//            let color = UIColor(MNColor.Red)
+//            cell.labelCritical.textColor = color
+//        } else {
+//        }
         cell.labelInformational.text = hostInformational[indexPath.row]
         cell.labelDate.text = hostDate[indexPath.row]
+        cell.imageIcon.image = UIImage.fontAwesomeIconWithName(.InfoCircle, textColor: UIColor.grayColor(), size: CGSizeMake(28, 28))
                 
         return cell
     }
