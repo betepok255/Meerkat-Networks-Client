@@ -18,7 +18,8 @@ import UIKit
 
 class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource  {
     
-    @IBOutlet var collectionView: UICollectionView?
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     // Data
     var sDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -37,6 +38,7 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        editButton.image = UIImage.fontAwesomeIconWithName(FontAwesome.Edit, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
 //        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
 //        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
 //        layout.itemSize = CGSize(width: 90, height: 90)

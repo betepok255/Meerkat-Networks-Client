@@ -515,7 +515,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="oY5-l5-oOR" id="Xyz-uZ-Dr5"/>
+                        <outlet property="collectionView" destination="oY5-l5-oOR" id="vlo-Fh-xJ8"/>
+                        <outlet property="editButton" destination="kiy-RZ-7UL" id="Jq5-aE-J0O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjb-ky-Jal" userLabel="First Responder" sceneMemberID="firstResponder"/>
