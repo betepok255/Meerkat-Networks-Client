@@ -788,7 +788,7 @@
         <!--Internal Audit-->
         <scene sceneID="5kY-aF-0Lh">
             <objects>
-                <viewController storyboardIdentifier="IAIndexViewController" title="Internal Audit" id="tAd-W9-T4o" customClass="IAIndexViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IAViewController" title="Internal Audit" id="tAd-W9-T4o" customClass="IAIndexViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fsL-Ty-NZn"/>
                         <viewControllerLayoutGuide type="bottom" id="G5R-WJ-xvc"/>
@@ -797,32 +797,210 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsd-OQ-DcZ">
-                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jhc-5y-C84">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="mOE-an-Y3j">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mOE-an-Y3j" id="mBG-Rh-JQ9">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="Mop-yM-ruh" kind="show" id="260-Vb-PqM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Wsd-OQ-DcZ" firstAttribute="centerY" secondItem="k6n-uW-Pvu" secondAttribute="centerY" id="LXL-kS-fHS"/>
-                            <constraint firstItem="Wsd-OQ-DcZ" firstAttribute="centerX" secondItem="k6n-uW-Pvu" secondAttribute="centerX" id="xfe-nc-kOg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jhc-5y-C84" secondAttribute="trailing" constant="-20" id="NaD-Pf-96i"/>
+                            <constraint firstItem="jhc-5y-C84" firstAttribute="leading" secondItem="k6n-uW-Pvu" secondAttribute="leadingMargin" constant="-20" id="PGW-Pt-6rm"/>
+                            <constraint firstItem="G5R-WJ-xvc" firstAttribute="top" secondItem="jhc-5y-C84" secondAttribute="bottom" id="TdY-KJ-Q7Q"/>
+                            <constraint firstItem="jhc-5y-C84" firstAttribute="top" secondItem="k6n-uW-Pvu" secondAttribute="topMargin" constant="20" id="ua6-wC-CEo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Internal Audit" id="guB-70-GIl">
                         <barButtonItem key="leftBarButtonItem" title="X" id="6eJ-kR-ij3">
                             <connections>
-                                <action selector="menuButtonTouched:" destination="tAd-W9-T4o" id="aGF-aa-4fO"/>
+                                <action selector="menuButtonTouched:" destination="tAd-W9-T4o" id="hDk-gy-SzX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="6eJ-kR-ij3" id="0dr-hG-pfS"/>
+                        <outlet property="tableView" destination="jhc-5y-C84" id="ne6-ZJ-JIE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpA-SE-DHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1068" y="1961"/>
+            <point key="canvasLocation" x="-1076" y="1961"/>
+        </scene>
+        <!--Components-->
+        <scene sceneID="V1E-kZ-TaC">
+            <objects>
+                <viewController title="Components" id="Mop-yM-ruh" customClass="ComponentsViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mmo-j9-5h4"/>
+                        <viewControllerLayoutGuide type="bottom" id="VZv-AH-T7M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iof-Qj-h8e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOST PICKER HERE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vED-z7-3gf">
+                                <rect key="frame" x="223" y="72" width="155" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HTn-iI-7Yj">
+                                <rect key="frame" x="0.0" y="101" width="600" height="499"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="NZu-6H-wGw" customClass="ComponentsListCell" customModule="Meerkat_Networks_Client" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZu-6H-wGw" id="Eql-OT-Im3">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="badge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf5-lg-lYw">
+                                                    <rect key="frame" x="510" y="11" width="49" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9b-PY-r7W">
+                                                    <rect key="frame" x="8" y="11" width="37" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="v9b-PY-r7W" firstAttribute="centerY" secondItem="Eql-OT-Im3" secondAttribute="centerY" id="K1x-HS-Q05"/>
+                                                <constraint firstItem="v9b-PY-r7W" firstAttribute="leading" secondItem="Eql-OT-Im3" secondAttribute="leadingMargin" id="KtC-Eo-GQP"/>
+                                                <constraint firstItem="qf5-lg-lYw" firstAttribute="trailing" secondItem="Eql-OT-Im3" secondAttribute="trailingMargin" id="QkB-07-6kV"/>
+                                                <constraint firstItem="qf5-lg-lYw" firstAttribute="centerY" secondItem="Eql-OT-Im3" secondAttribute="centerY" id="c45-9N-UCw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="badgeLabel" destination="qf5-lg-lYw" id="bxa-Oj-fJg"/>
+                                            <outlet property="hostLabel" destination="v9b-PY-r7W" id="Tcr-lZ-Zo5"/>
+                                            <segue destination="JEB-RA-i4m" kind="show" identifier="VulnerabilitioesSegue" id="ZCG-tQ-Yad"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VZv-AH-T7M" firstAttribute="top" secondItem="HTn-iI-7Yj" secondAttribute="bottom" id="3WE-MW-KCc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HTn-iI-7Yj" secondAttribute="trailing" constant="-20" id="OMG-Pm-AAW"/>
+                            <constraint firstItem="HTn-iI-7Yj" firstAttribute="top" secondItem="vED-z7-3gf" secondAttribute="bottom" constant="8" id="ZFu-kA-U4W"/>
+                            <constraint firstItem="vED-z7-3gf" firstAttribute="top" secondItem="mmo-j9-5h4" secondAttribute="bottom" constant="8" id="gds-8V-mNI"/>
+                            <constraint firstItem="HTn-iI-7Yj" firstAttribute="leading" secondItem="Iof-Qj-h8e" secondAttribute="leadingMargin" constant="-20" id="geD-uk-Lvn"/>
+                            <constraint firstItem="vED-z7-3gf" firstAttribute="centerX" secondItem="Iof-Qj-h8e" secondAttribute="centerX" id="t1p-Nl-nvY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Components" id="gWl-9E-AUt">
+                        <barButtonItem key="backBarButtonItem" title="x" id="XJt-k1-fZI"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="HTn-iI-7Yj" id="oVb-iD-mkT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJ5-61-wIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="1961"/>
+        </scene>
+        <!--Vulnerabilities View Controller-->
+        <scene sceneID="2yM-BX-nio">
+            <objects>
+                <viewController id="JEB-RA-i4m" customClass="VulnerabilitiesViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bx0-Od-xs8"/>
+                        <viewControllerLayoutGuide type="bottom" id="6YB-lP-elE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="woO-h3-6dv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T8q-jl-DVk">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="s8I-ue-Ekq" customClass="VulberabilitiesListCell" customModule="Meerkat_Networks_Client" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s8I-ue-Ekq" id="Q8H-pV-vwM">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vulnerability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmH-Gr-iWz">
+                                                    <rect key="frame" x="8" y="11" width="95" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="badge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poR-iW-b2z">
+                                                    <rect key="frame" x="510" y="11" width="49" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="poR-iW-b2z" firstAttribute="trailing" secondItem="Q8H-pV-vwM" secondAttribute="trailingMargin" id="OYT-3E-jgz"/>
+                                                <constraint firstItem="poR-iW-b2z" firstAttribute="centerY" secondItem="Q8H-pV-vwM" secondAttribute="centerY" id="Pzw-tx-xqv"/>
+                                                <constraint firstItem="XmH-Gr-iWz" firstAttribute="centerY" secondItem="Q8H-pV-vwM" secondAttribute="centerY" id="ayJ-4G-ei7"/>
+                                                <constraint firstItem="XmH-Gr-iWz" firstAttribute="leading" secondItem="Q8H-pV-vwM" secondAttribute="leadingMargin" id="bC4-TN-7dz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="badgeLabel" destination="poR-iW-b2z" id="uK9-Ci-dER"/>
+                                            <outlet property="vulnerabilityLabel" destination="XmH-Gr-iWz" id="H93-n5-WTI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6YB-lP-elE" firstAttribute="top" secondItem="T8q-jl-DVk" secondAttribute="bottom" id="8f0-eh-Y2f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T8q-jl-DVk" secondAttribute="trailing" constant="-20" id="NoV-Lg-2r5"/>
+                            <constraint firstItem="T8q-jl-DVk" firstAttribute="top" secondItem="Bx0-Od-xs8" secondAttribute="bottom" constant="-44" id="TeC-Tl-uOx"/>
+                            <constraint firstItem="T8q-jl-DVk" firstAttribute="leading" secondItem="woO-h3-6dv" secondAttribute="leadingMargin" constant="-20" id="y53-NI-Imw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="T8q-jl-DVk" id="Dpr-ev-AVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qg1-Hv-VdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="1961"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ccA-WK-GiD">
@@ -916,25 +1094,6 @@
             </objects>
             <point key="canvasLocation" x="-345" y="884"/>
         </scene>
-        <!--Hamburguer Navigation Controller-->
-        <scene sceneID="xPg-Fd-73K">
-            <objects>
-                <navigationController storyboardIdentifier="IANavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="lUL-oZ-akQ" customClass="DLHamburguerNavigationController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zfc-jL-LdU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tAd-W9-T4o" kind="relationship" relationship="rootViewController" id="APx-KI-YNh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VSe-xj-Qw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1901" y="1961"/>
-        </scene>
         <!--History-->
         <scene sceneID="Spr-2J-UCI">
             <objects>
@@ -1027,6 +1186,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noU-On-ud8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="ErR-ZK-ION">
+            <objects>
+                <navigationController storyboardIdentifier="IANavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="yuI-do-83X" customClass="DLHamburguerNavigationController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" id="wd0-uw-ERm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zFv-Z4-Uex">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tAd-W9-T4o" kind="relationship" relationship="rootViewController" id="QDW-6E-hLf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuW-0D-1EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1901" y="1961"/>
         </scene>
     </scenes>
 </document>

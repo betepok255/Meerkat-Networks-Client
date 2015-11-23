@@ -96,7 +96,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                         hamburguerViewController.contentViewController = nav
                         break
                     case 2:
-                        let nav = self.storyboard?.instantiateViewControllerWithIdentifier("IANavigationViewController") as! DLHamburguerNavigationController
+                        let nav = self.storyboard?.instantiateViewControllerWithIdentifier("IANavigationViewController")
                         hamburguerViewController.contentViewController = nav
                         break
                     default:

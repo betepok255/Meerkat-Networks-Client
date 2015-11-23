@@ -1,19 +1,18 @@
 //
-//  IAIndex.swift
+//  VulnerabilitiesViewController.swift
 //  Meerkat Networks Client
 //
-//  Created by Marvell on 16.11.15.
+//  Created by Marvell on 23.11.15.
 //  Copyright © 2015 Meerkat Networks. All rights reserved.
 //
 
 import UIKit
 
-class IAIndexViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class VulnerabilitiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
-    var hostNames: [String] = ["Host 1", "Host 2", "Host 3", "Host 4"]
+    var componentsSeguesData : [String] = ["x","xy","xyy","xyy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +20,6 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        menuButton.image = UIImage.fontAwesomeIconWithName(FontAwesome.Bars, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,26 +27,21 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func menuButtonTouched(sender: AnyObject) {
-        self.findHamburguerViewController()?.showMenuViewController()
-    }
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hostNames.count
+        return componentsSeguesData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! VulberabilitiesListCell
         
         cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
         
-        cell.textLabel!.text = hostNames[indexPath.row]
-        
-        cell.imageView!.image = UIImage.fontAwesomeIconWithName(FontAwesome.CheckCircle, textColor: UIColor.greenColor(), size: CGSizeMake(30, 30))
+        cell.vulnerabilityLabel.text = componentsSeguesData[indexPath.row]
+        cell.badgeLabel.text = "0"
         
         
         return cell
