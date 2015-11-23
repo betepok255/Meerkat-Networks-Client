@@ -25,6 +25,7 @@
 		5663E1221BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E1211BF4DD690069C0DE /* Meerkat_Networks_ClientTests.swift */; };
 		5663E12D1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */; };
 		5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E13D1BF4E2800069C0DE /* HostListCell.swift */; };
+		56C0687E1C032B080091D9E6 /* SheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C0687D1C032B080091D9E6 /* SheduleViewController.swift */; };
 		56DA40221BF77E9700FB65D5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */; };
 		56DA40231BF77E9700FB65D5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401D1BF77E9700FB65D5 /* RootViewController.swift */; };
 		56DA40241BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */; };
@@ -79,6 +80,7 @@
 		5663E12C1BF4DD690069C0DE /* Meerkat_Networks_ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meerkat_Networks_ClientUITests.swift; sourceTree = "<group>"; };
 		5663E12E1BF4DD690069C0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5663E13D1BF4E2800069C0DE /* HostListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListCell.swift; sourceTree = "<group>"; };
+		56C0687D1C032B080091D9E6 /* SheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheduleViewController.swift; sourceTree = "<group>"; };
 		56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		56DA401D1BF77E9700FB65D5 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerContainerViewController.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 		56EAD19B1BFF33FF00168CDC /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				56C0687D1C032B080091D9E6 /* SheduleViewController.swift */,
 			);
 			name = Schedule;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				56320EBF1BFCB06F0076CB7A /* Enum.swift in Sources */,
 				56320EC11BFCB06F0076CB7A /* FontAwesome.swift in Sources */,
 				56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */,
+				56C0687E1C032B080091D9E6 /* SheduleViewController.swift in Sources */,
 				56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */,
 				5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */,
 			);

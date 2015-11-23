@@ -444,36 +444,36 @@
                                     <constraint firstItem="TR0-NJ-Y7S" firstAttribute="centerY" secondItem="Zm2-Mr-fIg" secondAttribute="centerY" id="rvL-nP-pq0"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-l5-oOR">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-l5-oOR">
                                 <rect key="frame" x="0.0" y="160" width="600" height="391"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Zz-pS-bdx">
-                                    <size key="itemSize" width="80" height="125"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="NaM-sw-7xT">
+                                    <size key="itemSize" width="100" height="125"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="8" maxX="5" maxY="8"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CollectionViewCell" id="F3z-nk-KVb" customClass="WeektableCollectionViewCell" customModule="Meerkat_Networks_Client" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="125"/>
+                                        <rect key="frame" x="5" y="8" width="100" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHx-xS-T6P">
-                                                    <rect key="frame" x="25" y="8" width="30" height="21"/>
+                                                    <rect key="frame" x="35" y="8" width="30" height="20"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" red="0.074509803921568626" green="0.52941176470588236" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J06-UM-VsR">
-                                                    <rect key="frame" x="23" y="35" width="34" height="21"/>
+                                                    <rect key="frame" x="33" y="34" width="34" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.062745101749897003" green="0.71764707565307617" blue="0.41568627953529358" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -526,7 +526,7 @@
         <!--Schedule-->
         <scene sceneID="TSN-cB-2Fu">
             <objects>
-                <viewController id="gA8-Ll-ual" sceneMemberID="viewController">
+                <viewController id="gA8-Ll-ual" customClass="SheduleViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O4X-3C-Bwh"/>
                         <viewControllerLayoutGuide type="bottom" id="yIe-iE-vnf"/>
@@ -534,12 +534,89 @@
                     <view key="view" contentMode="scaleToFill" id="SVG-gJ-88B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat every" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbW-vX-qeV">
+                                <rect key="frame" x="20" y="72" width="101" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BUH-Du-T0d">
+                                <rect key="frame" x="20" y="101" width="560" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Su"/>
+                                    <segment title="Mo"/>
+                                    <segment title="Tu"/>
+                                    <segment title="We"/>
+                                    <segment title="Th"/>
+                                    <segment title="Fr"/>
+                                    <segment title="Sa"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentControlValueChanged:" destination="gA8-Ll-ual" eventType="valueChanged" id="sBD-Oe-qNW"/>
+                                </connections>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-V3-P41">
+                                <rect key="frame" x="0.0" y="451" width="600" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="r6W-Tb-rxO"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="469967832.480425">
+                                    <!--2015-11-23 10:37:12 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="da"/>
+                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-AY-ihf">
+                                <rect key="frame" x="0.0" y="137" width="600" height="306"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Obg-Ow-lL9">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Obg-Ow-lL9" id="5WD-YV-MMq">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BUH-Du-T0d" firstAttribute="top" secondItem="lbW-vX-qeV" secondAttribute="bottom" constant="8" id="08o-zT-EVn"/>
+                            <constraint firstItem="lbW-vX-qeV" firstAttribute="leading" secondItem="SVG-gJ-88B" secondAttribute="leadingMargin" id="2Vr-ca-Arw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aiy-V3-P41" secondAttribute="trailing" constant="-20" id="67N-qY-Ijq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cLA-AY-ihf" secondAttribute="trailing" constant="-20" id="7hZ-Jr-18e"/>
+                            <constraint firstItem="aiy-V3-P41" firstAttribute="leading" secondItem="SVG-gJ-88B" secondAttribute="leadingMargin" constant="-20" id="B1p-Q8-Vuj"/>
+                            <constraint firstItem="yIe-iE-vnf" firstAttribute="top" secondItem="aiy-V3-P41" secondAttribute="bottom" id="DbA-r8-GR7"/>
+                            <constraint firstItem="cLA-AY-ihf" firstAttribute="leading" secondItem="SVG-gJ-88B" secondAttribute="leadingMargin" constant="-20" id="Qzf-Wc-K9h"/>
+                            <constraint firstItem="BUH-Du-T0d" firstAttribute="trailing" secondItem="SVG-gJ-88B" secondAttribute="trailingMargin" id="ZCv-X7-keN"/>
+                            <constraint firstItem="cLA-AY-ihf" firstAttribute="top" secondItem="BUH-Du-T0d" secondAttribute="bottom" constant="8" id="bnM-hp-X96"/>
+                            <constraint firstItem="lbW-vX-qeV" firstAttribute="top" secondItem="O4X-3C-Bwh" secondAttribute="bottom" constant="8" id="ivw-TZ-pMA"/>
+                            <constraint firstItem="aiy-V3-P41" firstAttribute="top" secondItem="cLA-AY-ihf" secondAttribute="bottom" constant="8" id="j4q-9x-NYL"/>
+                            <constraint firstItem="BUH-Du-T0d" firstAttribute="leading" secondItem="SVG-gJ-88B" secondAttribute="leadingMargin" id="sfE-g6-lMe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="B49-Z1-6V7">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="LwC-CG-Q1h"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="LwC-CG-Q1h">
+                            <connections>
+                                <action selector="OnClickAddButton:" destination="gA8-Ll-ual" id="FVT-Ut-Ehl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="LwC-CG-Q1h" id="ofH-wL-tTf"/>
+                        <outlet property="datePicker" destination="aiy-V3-P41" id="EaM-2p-BCn"/>
+                        <outlet property="segmentControl" destination="BUH-Du-T0d" id="W7b-oy-I3p"/>
+                        <outlet property="tableView" destination="cLA-AY-ihf" id="WaD-Te-MLm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRy-vW-LbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

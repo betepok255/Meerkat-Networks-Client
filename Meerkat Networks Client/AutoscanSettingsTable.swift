@@ -29,7 +29,7 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
         ["10.23","10.30"],
         ["10.24","10.30"],
         ["10.25","10.30"],
-        ["10.26","10.30","10.30","10.30","10.30","10.30"]
+        ["10.26","10.30","10.30","10.30"]
     ]
     
 
@@ -57,21 +57,12 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! WeektableCollectionViewCell
-        cell.backgroundColor = UIColor.greenColor()
         cell.labelDay.text = sDays[indexPath.row]
         
         cell.labelTime.lineBreakMode = .ByWordWrapping // or NSLineBreakMode.ByWordWrapping
         cell.labelTime.numberOfLines = timesScan[indexPath.row].count
         
-        var text = ""
-        for first in timesScan[indexPath.row] {
-            if text != ""{
-                text += "\n"
-            }
-            
-            text += first
-        }
-        cell.labelTime.text = text
+        cell.labelTime.text = multilineTextFromArray(timesScan[indexPath.row])
         
 //        cell.textLabel?.text = "\(indexPath.section):\(indexPath.row)"
 //        cell.imageView?.image = UIImage(named: "circle")
@@ -84,5 +75,19 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 7
+    }
+    
+    func multilineTextFromArray(array: [String]) -> String
+    {
+        var text = ""
+        for first in array {
+            if text != ""{
+                text += "\n"
+            }
+            
+            text += first
+        }
+        
+        return text
     }
 }
