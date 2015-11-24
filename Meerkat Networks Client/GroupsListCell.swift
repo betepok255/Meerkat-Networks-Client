@@ -1,5 +1,5 @@
 //
-//  VulberabilitiesListCell.swift
+//  CategoriesListCell.swift
 //  Meerkat Networks Client
 //
 //  Created by Marvell on 23.11.15.
@@ -9,7 +9,7 @@
 
 import UIKit
 
-class VulberabilitiesListCell: UITableViewCell {
+class GroupsListCell: UITableViewCell {
     
     @IBOutlet weak var badgeLabel: UILabel!
     @IBOutlet weak var vulnerabilityLabel: UILabel!

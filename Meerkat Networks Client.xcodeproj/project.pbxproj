@@ -17,6 +17,8 @@
 		56320EBF1BFCB06F0076CB7A /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56320EBB1BFCB06F0076CB7A /* Enum.swift */; };
 		56320EC01BFCB06F0076CB7A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56320EBD1BFCB06F0076CB7A /* FontAwesome.otf */; };
 		56320EC11BFCB06F0076CB7A /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56320EBE1BFCB06F0076CB7A /* FontAwesome.swift */; };
+		563984F51C04B77000A5CA39 /* VulnerabilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563984F41C04B77000A5CA39 /* VulnerabilitiesViewController.swift */; };
+		563984F71C04B7D200A5CA39 /* VulnerabilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563984F61C04B7D200A5CA39 /* VulnerabilityListCell.swift */; };
 		5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10C1BF4DD690069C0DE /* AppDelegate.swift */; };
 		5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10E1BF4DD690069C0DE /* LoginViewController.swift */; };
 		5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1101BF4DD690069C0DE /* Main.storyboard */; };
@@ -28,8 +30,8 @@
 		56C0687E1C032B080091D9E6 /* SheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C0687D1C032B080091D9E6 /* SheduleViewController.swift */; };
 		56C068801C0379840091D9E6 /* ComponentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C0687F1C0379840091D9E6 /* ComponentsViewController.swift */; };
 		56C068821C037A2F0091D9E6 /* ComponentsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C068811C037A2F0091D9E6 /* ComponentsListCell.swift */; };
-		56C068841C0380B70091D9E6 /* VulnerabilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C068831C0380B70091D9E6 /* VulnerabilitiesViewController.swift */; };
-		56C068881C03813E0091D9E6 /* VulberabilitiesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C068871C03813E0091D9E6 /* VulberabilitiesListCell.swift */; };
+		56C068841C0380B70091D9E6 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C068831C0380B70091D9E6 /* GroupsViewController.swift */; };
+		56C068881C03813E0091D9E6 /* GroupsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C068871C03813E0091D9E6 /* GroupsListCell.swift */; };
 		56DA40221BF77E9700FB65D5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */; };
 		56DA40231BF77E9700FB65D5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401D1BF77E9700FB65D5 /* RootViewController.swift */; };
 		56DA40241BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */; };
@@ -70,6 +72,8 @@
 		56320EBC1BFCB06F0076CB7A /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
 		56320EBD1BFCB06F0076CB7A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		56320EBE1BFCB06F0076CB7A /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
+		563984F41C04B77000A5CA39 /* VulnerabilitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VulnerabilitiesViewController.swift; sourceTree = "<group>"; };
+		563984F61C04B7D200A5CA39 /* VulnerabilityListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VulnerabilityListCell.swift; sourceTree = "<group>"; };
 		5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meerkat Networks Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663E10C1BF4DD690069C0DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5663E10E1BF4DD690069C0DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +91,8 @@
 		56C0687D1C032B080091D9E6 /* SheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheduleViewController.swift; sourceTree = "<group>"; };
 		56C0687F1C0379840091D9E6 /* ComponentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsViewController.swift; sourceTree = "<group>"; };
 		56C068811C037A2F0091D9E6 /* ComponentsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentsListCell.swift; sourceTree = "<group>"; };
-		56C068831C0380B70091D9E6 /* VulnerabilitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VulnerabilitiesViewController.swift; sourceTree = "<group>"; };
-		56C068871C03813E0091D9E6 /* VulberabilitiesListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VulberabilitiesListCell.swift; sourceTree = "<group>"; };
+		56C068831C0380B70091D9E6 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		56C068871C03813E0091D9E6 /* GroupsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsListCell.swift; sourceTree = "<group>"; };
 		56DA401C1BF77E9700FB65D5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		56DA401D1BF77E9700FB65D5 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		56DA401E1BF77E9700FB65D5 /* DLHamburguerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerContainerViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,15 @@
 				56320EBE1BFCB06F0076CB7A /* FontAwesome.swift */,
 			);
 			name = "Font Awesome";
+			sourceTree = "<group>";
+		};
+		563984F31C04B75400A5CA39 /* Vulnerabilities */ = {
+			isa = PBXGroup;
+			children = (
+				563984F41C04B77000A5CA39 /* VulnerabilitiesViewController.swift */,
+				563984F61C04B7D200A5CA39 /* VulnerabilityListCell.swift */,
+			);
+			name = Vulnerabilities;
 			sourceTree = "<group>";
 		};
 		5663E1001BF4DD690069C0DE = {
@@ -216,13 +229,13 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
-		56C068861C0381260091D9E6 /* Vulnerabilities */ = {
+		56C068861C0381260091D9E6 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
-				56C068831C0380B70091D9E6 /* VulnerabilitiesViewController.swift */,
-				56C068871C03813E0091D9E6 /* VulberabilitiesListCell.swift */,
+				56C068831C0380B70091D9E6 /* GroupsViewController.swift */,
+				56C068871C03813E0091D9E6 /* GroupsListCell.swift */,
 			);
-			name = Vulnerabilities;
+			name = Groups;
 			sourceTree = "<group>";
 		};
 		56DA401A1BF77E1600FB65D5 /* Home */ = {
@@ -268,8 +281,9 @@
 		56DA402D1BF78FC500FB65D5 /* Internal Audit */ = {
 			isa = PBXGroup;
 			children = (
+				563984F31C04B75400A5CA39 /* Vulnerabilities */,
 				56C068851C03811D0091D9E6 /* Components */,
-				56C068861C0381260091D9E6 /* Vulnerabilities */,
+				56C068861C0381260091D9E6 /* Groups */,
 				56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */,
 			);
 			name = "Internal Audit";
@@ -499,7 +513,7 @@
 				56C068801C0379840091D9E6 /* ComponentsViewController.swift in Sources */,
 				5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */,
 				56F2FCA91BFE0A4B00F7AC00 /* Enums.swift in Sources */,
-				56C068841C0380B70091D9E6 /* VulnerabilitiesViewController.swift in Sources */,
+				56C068841C0380B70091D9E6 /* GroupsViewController.swift in Sources */,
 				56DA40251BF77E9700FB65D5 /* DLHamburguerNavigationController.swift in Sources */,
 				56290B121BFA30360095BC3D /* SettingsListCell.swift in Sources */,
 				56290B101BFA26B20095BC3D /* HistoryListCell.swift in Sources */,
@@ -513,13 +527,15 @@
 				56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */,
 				56DA40231BF77E9700FB65D5 /* RootViewController.swift in Sources */,
 				56DA40221BF77E9700FB65D5 /* MenuViewController.swift in Sources */,
+				563984F51C04B77000A5CA39 /* VulnerabilitiesViewController.swift in Sources */,
 				5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */,
+				563984F71C04B7D200A5CA39 /* VulnerabilityListCell.swift in Sources */,
 				56320EBF1BFCB06F0076CB7A /* Enum.swift in Sources */,
 				56320EC11BFCB06F0076CB7A /* FontAwesome.swift in Sources */,
 				56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */,
 				56C0687E1C032B080091D9E6 /* SheduleViewController.swift in Sources */,
 				56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */,
-				56C068881C03813E0091D9E6 /* VulberabilitiesListCell.swift in Sources */,
+				56C068881C03813E0091D9E6 /* GroupsListCell.swift in Sources */,
 				5663E13E1BF4E2800069C0DE /* HostListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

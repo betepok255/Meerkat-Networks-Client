@@ -55,4 +55,13 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        if (segue.identifier == "ComponentsSegue") {
+            let index = tableView.indexPathForSelectedRow!.row
+            let viewController = segue.destinationViewController as! ComponentsViewController
+            
+            viewController.hostName = hostNames[index]
+        }
+    }
+    
 }

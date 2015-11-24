@@ -10,12 +10,18 @@ import UIKit
 
 class ComponentsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-//    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var hostNameLabel: UILabel!
+    @IBOutlet weak var submenuButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    var hostNames: [String] = ["Web Server", "Database", "Frameworks", "Code analysis"]
-    var componentsSeguesData : [[String]] = [["x"],["xy"],["xyy"],["xyy"]]
-    var valueToPass: [String] = []
+    var hostName: String = ""
+    var components: [String] = ["Web Server", "Database", "Frameworks", "Code analysis"]
+    var componentsSeguesData : [[String]] = [
+        ["File permissions","Web server configuration","Benchmark","Server side language configuration"],
+        ["Access policies","User privileges / policies","Benchmark","Server type specific","PCI-DSS","Environment Configuration"],
+        ["Access policies","File permissions","Environment Configuration","Benchmark"],
+        ["Vulnerable functions","SQL injections"]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +30,11 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
         tableView.delegate = self
         tableView.dataSource = self
         
-//        menuButton.image = UIImage.fontAwesomeIconWithName(FontAwesome.Bars, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
+        hostNameLabel.text = hostName
+        
+        submenuButton.titleLabel?.font = UIFont.fontAwesomeOfSize(14)
+        submenuButton.setTitle(String.fontAwesomeIconWithName(FontAwesome.EllipsisV), forState: .Normal)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,16 +42,16 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
-//    @IBAction func menuButtonTouched(sender: AnyObject) {
-//        self.findHamburguerViewController()?.showMenuViewController()
-//    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hostNames.count
+        return components.count
+    }
+    
+    @IBAction func OnClickSubmenuButton(sender: AnyObject) {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -49,27 +59,19 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
         
         cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
         
-        cell.hostLabel.text = hostNames[indexPath.row]
+        cell.hostLabel.text = components[indexPath.row]
         cell.badgeLabel.text = "0"
-        
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        valueToPass = componentsSeguesData[indexPath.row]
-        performSegueWithIdentifier("VulnerabilitioesSegue", sender: self)
-        
-    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
-        
         if (segue.identifier == "VulnerabilitioesSegue") {
-            // initialize new view controller and cast it as your view controller
-            let viewController = segue.destinationViewController as! VulnerabilitiesViewController
-            // your new view controller should have property that will store passed value
-            viewController.componentsSeguesData = valueToPass
+            let index = tableView.indexPathForSelectedRow!.row
+            let viewController = segue.destinationViewController as! GroupsViewController
+            viewController.title = components[index]
+            viewController.componentsSeguesData = componentsSeguesData[index]
         }
-        
     }
     
 }
