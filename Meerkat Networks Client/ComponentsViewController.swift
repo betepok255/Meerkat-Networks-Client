@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ComponentsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ComponentsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,SubmenuSelectedDelegate {
     
     @IBOutlet weak var hostNameLabel: UILabel!
     @IBOutlet weak var submenuButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var menuContaiter: UIView!
+    
     
     var hostName: String = ""
     var components: [String] = ["Web Server", "Database", "Frameworks", "Code analysis"]
@@ -34,7 +36,7 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
         
         submenuButton.titleLabel?.font = UIFont.fontAwesomeOfSize(14)
         submenuButton.setTitle(String.fontAwesomeIconWithName(FontAwesome.EllipsisV), forState: .Normal)
-        
+                
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,6 +44,20 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
+    func SubmenuRowSelected(rowIndex: Int) {
+        switch rowIndex {
+        case 0:
+            self.performSegueWithIdentifier("ScanHostNowSegue", sender: self)
+            break;
+        case 1:
+            self.performSegueWithIdentifier("Settings", sender: self)
+            break;
+        case 2:
+            self.performSegueWithIdentifier("AboutHost", sender: self)
+            break;
+        default: break;
+        }
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -49,9 +65,6 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return components.count
-    }
-    
-    @IBAction func OnClickSubmenuButton(sender: AnyObject) {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -71,7 +84,14 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
             let viewController = segue.destinationViewController as! GroupsViewController
             viewController.title = components[index]
             viewController.componentsSeguesData = componentsSeguesData[index]
+        } else if (segue.identifier == "submenuSegue") { // your identifier here
+            let controller = segue.destinationViewController as! SubmenuViewController
+            controller.delegate = self
         }
     }
     
+}
+
+@objc protocol SubmenuSelectedDelegate {
+    func SubmenuRowSelected(rowIndex: Int)
 }

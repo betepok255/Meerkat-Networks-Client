@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5613A1B91C0755FD00C3E096 /* SubmenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613A1B81C0755FD00C3E096 /* SubmenuViewController.swift */; };
 		56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */; };
 		56290B0E1BFA24C00095BC3D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0D1BFA24C00095BC3D /* HistoryViewController.swift */; };
 		56290B101BFA26B20095BC3D /* HistoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0F1BFA26B20095BC3D /* HistoryListCell.swift */; };
@@ -39,6 +40,7 @@
 		56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */; };
 		56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */; };
 		56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40341BF79C1B00FB65D5 /* EAIndex.swift */; };
+		56E5C3151C084E5300417E6E /* IASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C3141C084E5300417E6E /* IASettingsViewController.swift */; };
 		56EAD1991BFF338C00168CDC /* WeektableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EAD1981BFF338C00168CDC /* WeektableCollectionViewCell.swift */; };
 		56F2FCA91BFE0A4B00F7AC00 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2FCA81BFE0A4B00F7AC00 /* Enums.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5613A1B81C0755FD00C3E096 /* SubmenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmenuViewController.swift; sourceTree = "<group>"; };
 		56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAIndexViewController.swift; sourceTree = "<group>"; };
 		56290B0D1BFA24C00095BC3D /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		56290B0F1BFA26B20095BC3D /* HistoryListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryListCell.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHamburguerViewController.swift; sourceTree = "<group>"; };
 		56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListViewController.swift; sourceTree = "<group>"; };
 		56DA40341BF79C1B00FB65D5 /* EAIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAIndex.swift; sourceTree = "<group>"; };
+		56E5C3141C084E5300417E6E /* IASettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IASettingsViewController.swift; sourceTree = "<group>"; };
 		56EAD1981BFF338C00168CDC /* WeektableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeektableCollectionViewCell.swift; sourceTree = "<group>"; };
 		56F2FCA81BFE0A4B00F7AC00 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +227,7 @@
 		56C068851C03811D0091D9E6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5613A1B81C0755FD00C3E096 /* SubmenuViewController.swift */,
 				56C0687F1C0379840091D9E6 /* ComponentsViewController.swift */,
 				56C068811C037A2F0091D9E6 /* ComponentsListCell.swift */,
 			);
@@ -281,6 +286,7 @@
 		56DA402D1BF78FC500FB65D5 /* Internal Audit */ = {
 			isa = PBXGroup;
 			children = (
+				56E5C3141C084E5300417E6E /* IASettingsViewController.swift */,
 				563984F31C04B75400A5CA39 /* Vulnerabilities */,
 				56C068851C03811D0091D9E6 /* Components */,
 				56C068861C0381260091D9E6 /* Groups */,
@@ -513,6 +519,7 @@
 				56C068801C0379840091D9E6 /* ComponentsViewController.swift in Sources */,
 				5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */,
 				56F2FCA91BFE0A4B00F7AC00 /* Enums.swift in Sources */,
+				5613A1B91C0755FD00C3E096 /* SubmenuViewController.swift in Sources */,
 				56C068841C0380B70091D9E6 /* GroupsViewController.swift in Sources */,
 				56DA40251BF77E9700FB65D5 /* DLHamburguerNavigationController.swift in Sources */,
 				56290B121BFA30360095BC3D /* SettingsListCell.swift in Sources */,
@@ -533,6 +540,7 @@
 				56320EBF1BFCB06F0076CB7A /* Enum.swift in Sources */,
 				56320EC11BFCB06F0076CB7A /* FontAwesome.swift in Sources */,
 				56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */,
+				56E5C3151C084E5300417E6E /* IASettingsViewController.swift in Sources */,
 				56C0687E1C032B080091D9E6 /* SheduleViewController.swift in Sources */,
 				56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */,
 				56C068881C03813E0091D9E6 /* GroupsListCell.swift in Sources */,

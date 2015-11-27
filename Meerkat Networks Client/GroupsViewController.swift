@@ -12,6 +12,8 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var containerN: UIView!
+    
     var componentsSeguesData : [String] = []
     
     override func viewDidLoad() {
