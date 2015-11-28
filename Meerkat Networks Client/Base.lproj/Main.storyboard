@@ -56,6 +56,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4n7-vN-Vcg" secondAttribute="trailing" constant="20" id="kyr-Ka-FV0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="login" destination="4n7-vN-Vcg" id="QTB-2e-Lui"/>
+                        <outlet property="password" destination="Lyh-Yj-Ere" id="xYQ-wN-7Cd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,8 +308,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="ct1-GG-bEk" id="rnL-iZ-qTG"/>
                         <outlet property="profileButton" destination="xgm-0y-4yI" id="SMh-3o-HkC"/>
                         <outlet property="tableView" destination="oI5-zl-vim" id="vZ8-q7-lVY"/>
+                        <outlet property="usernameLabel" destination="NeZ-CX-HjK" id="iW2-Uy-kOy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQ2-mt-vXU" sceneMemberID="firstResponder"/>
@@ -374,6 +380,9 @@
                                 <state key="normal" title="Scan Now">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnClickScanButton:" destination="SvA-Zk-4uS" eventType="touchUpInside" id="Mon-uS-brv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -445,7 +454,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-l5-oOR">
-                                <rect key="frame" x="0.0" y="160" width="600" height="391"/>
+                                <rect key="frame" x="0.0" y="160" width="600" height="440"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="NaM-sw-7xT">
@@ -559,7 +568,7 @@
                                 </connections>
                             </segmentedControl>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-V3-P41">
-                                <rect key="frame" x="0.0" y="451" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="r6W-Tb-rxO"/>
@@ -570,7 +579,7 @@
                                 <locale key="locale" localeIdentifier="da"/>
                             </datePicker>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-AY-ihf">
-                                <rect key="frame" x="0.0" y="137" width="600" height="306"/>
+                                <rect key="frame" x="0.0" y="137" width="600" height="355"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1433,7 +1442,6 @@
         <!--Information about host-->
         <scene sceneID="H7E-4X-QKS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="esS-PY-wyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Information about host" id="Aus-AY-HZ1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c25-ih-7Bt"/>
@@ -1446,6 +1454,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esS-PY-wyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="368" y="2742"/>
         </scene>

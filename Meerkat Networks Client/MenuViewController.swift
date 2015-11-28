@@ -13,6 +13,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     // outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     @IBAction func ProfileButtonClick(sender: AnyObject) {
         if activeMenu.elementsEqual(defaultMenu)
@@ -59,6 +61,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         profileButton.titleLabel?.font = UIFont.fontAwesomeOfSize(20)
         profileButton.setTitle(String.fontAwesomeIconWithName(FontAwesome.CaretDown), forState: .Normal)
         
+        usernameLabel.text = SingletonDB.sharedInstance.userName
+        emailLabel.text = SingletonDB.sharedInstance.userEmail
     }
 
     override func didReceiveMemoryWarning() {
