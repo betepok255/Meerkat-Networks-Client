@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -22,6 +23,7 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
     var timesScan: [[String]] = [[],[],[],[],[],[],[]]
     
     var activeDayTimes = [""]
+//    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +52,46 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
         self.timesScan[self.segmentControl.selectedSegmentIndex].append(dateString)
         self.activeDayTimes = self.timesScan[self.segmentControl.selectedSegmentIndex]
         self.tableView.reloadData()
+        
+        self.SaveSchedule()
+//        self.myActivityIndicator.center = self.view.center
+//        view.addSubview(myActivityIndicator)
+        
     }
+    
+    func SaveSchedule() {
+        
+//        self.myActivityIndicator.startAnimating()
+        
+        let parameters = ["token": SingletonDB.sharedInstance.token, "id": self.hostId, "state": self.hostState, "data": self.convertTimescanToDataString()]
+        
+        print(parameters)
+        
+//        Alamofire.request(.POST, APIUrl.EASaveHost.rawValue, parameters: parameters as! [String : AnyObject])
+    }
+    
+    func convertTimescanToDataString() -> [[String]] {
+        var converted: [[String]] = []
+        var res = ""
+        
+        for var i = 0; i < self.timesScan.count; i++ {
+            converted.append([])
+            for var j = 0; j < self.timesScan[i].count; j++ {
+                converted[i].append(self.timesScan[i][j])
+                res += self.timesScan[i][j]
+                if j < self.timesScan[i].count-1 {
+                    res+=","
+                }
+            }
+        }
+        // Fix: monday / sunday
+        let sunday = converted[0]
+        converted.removeAtIndex(0)
+        converted.append(sunday)
+        
+        return converted
+    }
+    
     @IBAction func SegmentControlValueChanged(sender: AnyObject) {
         self.activeDayTimes = self.timesScan[self.segmentControl.selectedSegmentIndex]
         self.tableView.reloadData()

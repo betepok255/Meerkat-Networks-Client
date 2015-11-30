@@ -68,9 +68,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let host = hosts.valueForKey(String(indexPath.row))!
+        
 //            print("[" + (host["id"] as! String) + "]")
             
             let parameters = ["token": SingletonDB.sharedInstance.token, "ids": "[" + (host["id"] as! String) + "]" ]
+            
             Alamofire.request(.POST, APIUrl.EADeleteHost.rawValue, parameters: parameters)
             
             hosts.removeObjectForKey(String(indexPath.row))

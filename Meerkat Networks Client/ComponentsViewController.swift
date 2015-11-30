@@ -17,6 +17,8 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
     
     
     var hostName: String = ""
+    var hostId: String = ""
+    var projectId: String = ""
     var components: [String] = ["Web Server", "Database", "Frameworks", "Code analysis"]
     var componentsSeguesData : [[String]] = [
         ["File permissions","Web server configuration","Benchmark","Server side language configuration"],
@@ -84,12 +86,17 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
             let viewController = segue.destinationViewController as! GroupsViewController
             viewController.title = components[index]
             viewController.componentsSeguesData = componentsSeguesData[index]
-        } else if (segue.identifier == "submenuSegue") { // your identifier here
+        } else if (segue.identifier == "submenuSegue") {
             let controller = segue.destinationViewController as! SubmenuViewController
             controller.delegate = self
+        } else if (segue.identifier == "ScanHostNowSegue") {
+            let controller = segue.destinationViewController as! ScanNowViewController
+            controller.hostId = self.hostId
+            controller.projectId = self.projectId
+            
         }
     }
-    
+
 }
 
 @objc protocol SubmenuSelectedDelegate {

@@ -83,14 +83,29 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
     func convertValueToArray(days: AnyObject) {
 //        print(days)
         for dayTable in days as! NSArray {
-            timesScan[0].append(dayTable["day7"] as! String)
-            timesScan[1].append(dayTable["day1"] as! String)
-            timesScan[2].append(dayTable["day2"] as! String)
-            timesScan[3].append(dayTable["day3"] as! String)
-            timesScan[4].append(dayTable["day4"] as! String)
-            timesScan[5].append(dayTable["day5"] as! String)
-            timesScan[6].append(dayTable["day6"] as! String)
+            if dayTable["day7"] as! String != "" {
+                timesScan[0].append(dayTable["day7"] as! String)
+            }
+            if dayTable["day1"] as! String != "" {
+                timesScan[1].append(dayTable["day1"] as! String)
+            }
+            if dayTable["day2"] as! String != "" {
+                timesScan[2].append(dayTable["day2"] as! String)
+            }
+            if dayTable["day3"] as! String != "" {
+                timesScan[3].append(dayTable["day3"] as! String)
+            }
+            if dayTable["day4"] as! String != "" {
+                timesScan[4].append(dayTable["day4"] as! String)
+            }
+            if dayTable["day5"] as! String != "" {
+                timesScan[5].append(dayTable["day5"] as! String)
+            }
+            if dayTable["day6"] as! String != "" {
+                timesScan[6].append(dayTable["day6"] as! String)
+            }
         }
+//        print(timesScan)
     }
     
     override func didReceiveMemoryWarning() {

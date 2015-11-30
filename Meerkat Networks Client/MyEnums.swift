@@ -54,7 +54,7 @@ public enum APIUrl: String {
     
     // IA
     case AboutHost = "http://54.148.252.140/cabinet/api/internal_audit/hostinfo.php"
-    case IAAutoScanSettings = "http://54.148.252.140/cabinet/api/internal_audit/loadAll.php"
+    case IAHistory = "http://54.148.252.140/cabinet/api/internal_audit/loadAll.php"
     case IAScan = "http://54.148.252.140/cabinet/api/internal_audit/scan.php"
     case IAScheduleLoad = "http://54.148.252.140/cabinet/api/internal_audit/load.php"
     case IAScheduleSave = "http://54.148.252.140/cabinet/api/internal_audit/save.php"
