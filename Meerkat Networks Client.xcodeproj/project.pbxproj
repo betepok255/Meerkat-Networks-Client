@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5613A1B91C0755FD00C3E096 /* SubmenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5613A1B81C0755FD00C3E096 /* SubmenuViewController.swift */; };
+		5627616D1C0CCF5A00DE93C9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DB2B6F1C089B2400C13BC7 /* Alamofire.framework */; };
+		5627616E1C0CCF5A00DE93C9 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56DB2B6F1C089B2400C13BC7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */; };
 		56290B0E1BFA24C00095BC3D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0D1BFA24C00095BC3D /* HistoryViewController.swift */; };
 		56290B101BFA26B20095BC3D /* HistoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56290B0F1BFA26B20095BC3D /* HistoryListCell.swift */; };
@@ -42,7 +44,6 @@
 		56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */; };
 		56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */; };
 		56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40341BF79C1B00FB65D5 /* EAIndex.swift */; };
-		56DB2B7C1C089B4100C13BC7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DB2B6F1C089B2400C13BC7 /* Alamofire.framework */; };
 		56E5C3151C084E5300417E6E /* IASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C3141C084E5300417E6E /* IASettingsViewController.swift */; };
 		56E5C31A1C08519A00417E6E /* AboutHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C3191C08519A00417E6E /* AboutHostViewController.swift */; };
 		56E5C31C1C0851AC00417E6E /* ScanNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C31B1C0851AC00417E6E /* ScanNowViewController.swift */; };
@@ -53,6 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5627616F1C0CCF5A00DE93C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56DB2B641C089B2400C13BC7 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		5663E11E1BF4DD690069C0DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5663E1011BF4DD690069C0DE /* Project object */;
@@ -118,6 +126,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		562761711C0CCF5A00DE93C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5627616E1C0CCF5A00DE93C9 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5613A1B81C0755FD00C3E096 /* SubmenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmenuViewController.swift; sourceTree = "<group>"; };
 		56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAIndexViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56DB2B7C1C089B4100C13BC7 /* Alamofire.framework in Frameworks */,
+				5627616D1C0CCF5A00DE93C9 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,10 +524,12 @@
 				5663E1051BF4DD690069C0DE /* Sources */,
 				5663E1061BF4DD690069C0DE /* Frameworks */,
 				5663E1071BF4DD690069C0DE /* Resources */,
+				562761711C0CCF5A00DE93C9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				562761701C0CCF5A00DE93C9 /* PBXTargetDependency */,
 			);
 			name = "Meerkat Networks Client";
 			productName = "Meerkat Networks Client";
@@ -741,6 +765,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		562761701C0CCF5A00DE93C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 5627616F1C0CCF5A00DE93C9 /* PBXContainerItemProxy */;
+		};
 		5663E11F1BF4DD690069C0DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5663E1081BF4DD690069C0DE /* Meerkat Networks Client */;
@@ -863,8 +892,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Meerkat Networks (QE573M93RK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Meerkat Networks (QE573M93RK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Meerkat Networks Client/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -878,8 +908,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Meerkat Networks (QE573M93RK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Meerkat Networks (QE573M93RK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "Meerkat Networks Client/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

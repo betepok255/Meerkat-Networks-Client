@@ -62,9 +62,7 @@ class ScanNowViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
         
         cell.component.text = components[indexPath.section][indexPath.row]
-        //        cell.labelUrl.text = hostUrl[indexPath.row]
-        //        cell.labelStatus.text = hostStatus[indexPath.row]
-        //        cell.
+        
         return cell
     }
     

@@ -12,14 +12,14 @@ import Alamofire
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HostStateDelegate  {
     
     @IBOutlet weak var tableView: UITableView!
-//    var hostUrl: [String] = ["Url 1", "Url 2"]
-//    var hostStatus: [String] = ["On", "Off"]
+    //    var hostUrl: [String] = ["Url 1", "Url 2"]
+    //    var hostStatus: [String] = ["On", "Off"]
     
-// TEMPLATE:    let host = hosts.valueForKey(String(indexPath.row))!
+    // TEMPLATE:    let host = hosts.valueForKey(String(indexPath.row))!
     
     let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
-    var hosts: NSMutableDictionary = NSMutableDictionary()
+    var hosts: NSMutableArray = []
     
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIBarButtonItem!
@@ -52,7 +52,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
         
-        let host = hosts.valueForKey(String(indexPath.row))!
+        let host = hosts[indexPath.row] as! NSDictionary
         
         cell.labelUrl.text = host["host"] as? String
         cell.labelStatus.text = host["autoscan"] as? String
@@ -67,15 +67,13 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            let host = hosts.valueForKey(String(indexPath.row))!
-        
-//            print("[" + (host["id"] as! String) + "]")
+            
+            let host = hosts[indexPath.row] as! NSDictionary
             
             let parameters = ["token": SingletonDB.sharedInstance.token, "ids": "[" + (host["id"] as! String) + "]" ]
-            
             Alamofire.request(.POST, APIUrl.EADeleteHost.rawValue, parameters: parameters)
             
-            hosts.removeObjectForKey(String(indexPath.row))
+            hosts.removeObjectAtIndex(indexPath.row)
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
@@ -135,9 +133,12 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                 
                 if (response.response?.statusCode == 200){
                     self.hosts.removeAllObjects()
-                    let dict = response.result.value as! NSArray
+                    
+                    let dict = response.result.value as! NSMutableArray
+                    var mutableElem = NSMutableDictionary()
                     for var i = 0; i < dict.count; i++ {
-                        self.hosts.setValue(dict[i], forKey: String(i))
+                        mutableElem = NSMutableDictionary(dictionary: dict[i] as! [NSObject : AnyObject])
+                        self.hosts.addObject(mutableElem)
                     }
                     
                     self.tableView.reloadData()
@@ -153,7 +154,9 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         if (segue.identifier == "EATimetableSegue") {
             let index = tableView.indexPathForSelectedRow!.row
-            let host = hosts.valueForKey(String(index))!
+            let host = hosts[index] as! NSDictionary
+            
+            print(host)
             
             let viewController = segue.destinationViewController as! AutoscanSettingsTable
             viewController.hostID = host["id"] as! String
@@ -164,7 +167,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func HostStateChanged(index: Int, state: String) {
-        self.loadHosts()
+        let host = self.hosts[index]
+        host.setValue(state, forKey: "autoscan")
+        self.hosts.replaceObjectAtIndex(index, withObject: host)
+        
+        tableView.reloadData()
     }
 }
 

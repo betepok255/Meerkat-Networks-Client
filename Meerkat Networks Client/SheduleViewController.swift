@@ -11,7 +11,7 @@ import Alamofire
 
 class SheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var tableView: UITableView!    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -19,11 +19,11 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
     // Data
     var hostId = ""
     var hostState = ""
-//    var sDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]    
+    //    var sDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     var timesScan: [[String]] = [[],[],[],[],[],[],[]]
     
     var activeDayTimes = [""]
-//    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+    //    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,40 +54,35 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
         self.tableView.reloadData()
         
         self.SaveSchedule()
-//        self.myActivityIndicator.center = self.view.center
-//        view.addSubview(myActivityIndicator)
+        //        self.myActivityIndicator.center = self.view.center
+        //        view.addSubview(myActivityIndicator)
         
     }
     
     func SaveSchedule() {
-        
-//        self.myActivityIndicator.startAnimating()
-        
-        let parameters = ["token": SingletonDB.sharedInstance.token, "id": self.hostId, "state": self.hostState, "data": self.convertTimescanToDataString()]
+        let parameters = ["token": SingletonDB.sharedInstance.token, "id": self.hostId, "state": self.hostState as String, "data": self.convertTimescanToDataString().description]
         
         print(parameters)
-        
-//        Alamofire.request(.POST, APIUrl.EASaveHost.rawValue, parameters: parameters as! [String : AnyObject])
+        Alamofire.request(.POST, APIUrl.EASaveHost.rawValue, parameters: parameters)
     }
     
     func convertTimescanToDataString() -> [[String]] {
         var converted: [[String]] = []
-        var res = ""
         
         for var i = 0; i < self.timesScan.count; i++ {
-            converted.append([])
-            for var j = 0; j < self.timesScan[i].count; j++ {
-                converted[i].append(self.timesScan[i][j])
-                res += self.timesScan[i][j]
-                if j < self.timesScan[i].count-1 {
-                    res+=","
+            for var j = 0; j < 3/*self.timesScan[i].count*/; j++ {
+                var temp: [String] = []
+                temp.append(String(j+1))
+                temp.append(String(i+1))
+                if self.timesScan[i].count < j + 1 {
+                    temp.append("")
+                } else {
+                    temp.append(self.timesScan[i][j])
                 }
+                
+                converted.append(temp)
             }
         }
-        // Fix: monday / sunday
-        let sunday = converted[0]
-        converted.removeAtIndex(0)
-        converted.append(sunday)
         
         return converted
     }
@@ -125,5 +120,5 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
+    
 }

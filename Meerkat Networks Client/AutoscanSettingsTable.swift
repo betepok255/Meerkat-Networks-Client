@@ -81,7 +81,6 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
     }
     
     func convertValueToArray(days: AnyObject) {
-//        print(days)
         for dayTable in days as! NSArray {
             if dayTable["day7"] as! String != "" {
                 timesScan[0].append(dayTable["day7"] as! String)
@@ -105,7 +104,6 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
                 timesScan[6].append(dayTable["day6"] as! String)
             }
         }
-//        print(timesScan)
     }
     
     override func didReceiveMemoryWarning() {
@@ -122,8 +120,6 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
         
         cell.labelTime.text = multilineTextFromArray(timesScan[indexPath.row])
         
-//        cell.textLabel?.text = "\(indexPath.section):\(indexPath.row)"
-//        cell.imageView?.image = UIImage(named: "circle")
         return cell
     }
     
@@ -153,7 +149,7 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
         self.state = stateSwitch.on ? "on" : "off"
         self.delegate?.HostStateChanged(self.hostIndex, state: self.state)
         
-        let parameters = ["token": SingletonDB.sharedInstance.token, "id": String(hostID), "state": state]
+        let parameters = ["token": SingletonDB.sharedInstance.token, "id": String(hostID), "state": self.state as String ]
         
         Alamofire.request(.POST, APIUrl.EASaveHost.rawValue, parameters: parameters)
     }
@@ -163,6 +159,7 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
             let viewController = segue.destinationViewController as! SheduleViewController
             viewController.hostId = self.hostID
             viewController.timesScan = self.timesScan
+            viewController.hostState = self.state
         }
     }
 }
