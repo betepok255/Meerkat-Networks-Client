@@ -441,6 +441,9 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d05-Fl-hYE">
                                         <rect key="frame" x="543" y="14" width="51" height="31"/>
                                         <animations/>
+                                        <connections>
+                                            <action selector="OnStateChanged:" destination="ah5-0p-5cd" eventType="valueChanged" id="IZ8-XL-CDI"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <animations/>
@@ -453,7 +456,7 @@
                                     <constraint firstItem="TR0-NJ-Y7S" firstAttribute="centerY" secondItem="Zm2-Mr-fIg" secondAttribute="centerY" id="rvL-nP-pq0"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-l5-oOR">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-l5-oOR">
                                 <rect key="frame" x="0.0" y="160" width="600" height="440"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -519,13 +522,14 @@
                     <navigationItem key="navigationItem" title="AutoscanSettingsTable" id="Nqq-OF-pEZ">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="kiy-RZ-7UL">
                             <connections>
-                                <segue destination="gA8-Ll-ual" kind="show" id="kpW-jk-GlY"/>
+                                <segue destination="gA8-Ll-ual" kind="show" identifier="ScheduleSegue" id="kpW-jk-GlY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="oY5-l5-oOR" id="vlo-Fh-xJ8"/>
                         <outlet property="editButton" destination="kiy-RZ-7UL" id="Jq5-aE-J0O"/>
+                        <outlet property="stateSwitch" destination="d05-Fl-hYE" id="JyM-sr-Q0Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjb-ky-Jal" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -567,7 +571,7 @@
                                     <action selector="SegmentControlValueChanged:" destination="gA8-Ll-ual" eventType="valueChanged" id="sBD-Oe-qNW"/>
                                 </connections>
                             </segmentedControl>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-V3-P41">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-V3-P41">
                                 <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <animations/>
                                 <constraints>
@@ -578,7 +582,7 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="da"/>
                             </datePicker>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-AY-ihf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-AY-ihf">
                                 <rect key="frame" x="0.0" y="137" width="600" height="355"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1206,7 +1210,7 @@
                                         <connections>
                                             <outlet property="labelStatus" destination="K1z-ww-QX9" id="rbN-96-3AZ"/>
                                             <outlet property="labelUrl" destination="drl-MC-Jwm" id="XVy-px-Lil"/>
-                                            <segue destination="ah5-0p-5cd" kind="show" id="rO6-T6-1eG"/>
+                                            <segue destination="ah5-0p-5cd" kind="show" identifier="EATimetableSegue" id="rO6-T6-1eG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1230,8 +1234,14 @@
                                 <action selector="doEdit:" destination="C9u-lu-FsK" id="b0k-pp-8p7"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="KPN-4B-fnk">
+                            <connections>
+                                <action selector="OnClickAddButton:" destination="C9u-lu-FsK" id="SGW-8s-Lt8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="KPN-4B-fnk" id="l4W-RS-cAX"/>
                         <outlet property="editButton" destination="6V3-1O-hwM" id="pK3-lM-rbf"/>
                         <outlet property="tableView" destination="FLJ-V1-iYc" id="7et-Yl-i0y"/>
                     </connections>
@@ -1564,6 +1574,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OfB-o5-Dua"/>
+        <segue reference="rO6-T6-1eG"/>
     </inferredMetricsTieBreakers>
 </document>

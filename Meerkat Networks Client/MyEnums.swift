@@ -46,15 +46,15 @@ public enum APIUrl: String {
     // EA
     case EAHistory = "http://54.148.252.140/cabinet/api/external_audit/history.php"
     case EAAutoScanSettings = "http://54.148.252.140/cabinet/api/external_audit/loadAll.php"
-//    case EAWeektable = "http://54.148.252.140/cabinet/api/external_audit/load.php"
     case EAScan = "http://54.148.252.140/cabinet/api/external_audit/scan.php"
-    case EAScheduleLoad = "http://54.148.252.140/cabinet/api/external_audit/load.php"
-    case EAScheduleSave = "http://54.148.252.140/cabinet/api/external_audit/save.php"
+    case EALoadHost = "http://54.148.252.140/cabinet/api/external_audit/load.php"
+    case EACreateHost = "http://54.148.252.140/cabinet/api/external_audit/create.php"
+    case EASaveHost = "http://54.148.252.140/cabinet/api/external_audit/save.php"
+    case EADeleteHost = "http://54.148.252.140/cabinet/api/external_audit/delete.php"
     
     // IA
     case AboutHost = "http://54.148.252.140/cabinet/api/internal_audit/hostinfo.php"
     case IAAutoScanSettings = "http://54.148.252.140/cabinet/api/internal_audit/loadAll.php"
-//    case IAWeektable = "http://54.148.252.140/cabinet/api/internal_audit/load.php"
     case IAScan = "http://54.148.252.140/cabinet/api/internal_audit/scan.php"
     case IAScheduleLoad = "http://54.148.252.140/cabinet/api/internal_audit/load.php"
     case IAScheduleSave = "http://54.148.252.140/cabinet/api/internal_audit/save.php"

@@ -32,6 +32,8 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         menuButton.image = UIImage.fontAwesomeIconWithName(.Bars, textColor: UIColor.blackColor(), size: CGSizeMake(30, 30))
         
+        self.myActivityIndicator.center = self.view.center
+        view.addSubview(myActivityIndicator)
         self.myActivityIndicator.startAnimating()
         
         let parameters = ["token": SingletonDB.sharedInstance.token]
@@ -42,7 +44,7 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
                 
                 if (response.response?.statusCode == 200){
                     self.hosts = response.result.value
-                    print(self.hosts![0])
+//                    print(self.hosts![0])
                     self.tableView.reloadData()
                 } else {
                     let alert = UIAlertController(title: "Error", message: "Login or password incorrect!", preferredStyle: UIAlertControllerStyle.Alert)

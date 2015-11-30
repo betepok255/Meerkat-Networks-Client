@@ -16,15 +16,10 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var datePicker: UIDatePicker!
     
     // Data
-    var sDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-    var timesScan: [[String]] = [["10.20","10.30","10.30","10.30"],
-        ["10.21","10.30"],
-        ["10.22","10.30"],
-        ["10.23","10.30"],
-        ["10.24","10.30"],
-        ["10.25","10.30"],
-        ["10.26","10.30","10.30","10.30"]
-    ]
+    var hostId = ""
+    var hostState = ""
+//    var sDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]    
+    var timesScan: [[String]] = [[],[],[],[],[],[],[]]
     
     var activeDayTimes = [""]
     

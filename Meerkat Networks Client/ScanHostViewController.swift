@@ -15,8 +15,6 @@ class ScanHostViewController: UIViewController {
     @IBOutlet weak var scanNowButton: UIButton!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
