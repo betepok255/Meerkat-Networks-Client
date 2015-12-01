@@ -67,17 +67,26 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func convertTimescanToDataString() -> [[String]] {
+        var arrForSave: [[String]] = [[],[],[],[],[],[],[]]
+        arrForSave[0] = timesScan[1]
+        arrForSave[1] = timesScan[2]
+        arrForSave[2] = timesScan[3]
+        arrForSave[3] = timesScan[4]
+        arrForSave[4] = timesScan[5]
+        arrForSave[5] = timesScan[6]
+        arrForSave[6] = timesScan[0]
+        
         var converted: [[String]] = []
         
-        for var i = 0; i < self.timesScan.count; i++ {
-            for var j = 0; j < 3/*self.timesScan[i].count*/; j++ {
+        for var i = 0; i < arrForSave.count; i++ {
+            for var j = 0; j < 3 /*self.timesScan[i].count*/; j++ {
                 var temp: [String] = []
                 temp.append(String(j+1))
                 temp.append(String(i+1))
-                if self.timesScan[i].count < j + 1 {
+                if arrForSave[i].count < j + 1 {
                     temp.append("")
                 } else {
-                    temp.append(self.timesScan[i][j])
+                    temp.append(arrForSave[i][j])
                 }
                 
                 converted.append(temp)
