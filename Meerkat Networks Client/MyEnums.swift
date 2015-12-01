@@ -53,11 +53,13 @@ public enum APIUrl: String {
     case EADeleteHost = "http://54.148.252.140/cabinet/api/external_audit/delete.php"
     
     // IA
-    case AboutHost = "http://54.148.252.140/cabinet/api/internal_audit/hostinfo.php"
+    case IAAboutHost = "http://54.148.252.140/cabinet/api/internal_audit/hostinfo.php"
     case IAHistory = "http://54.148.252.140/cabinet/api/internal_audit/loadAll.php"
     case IAScan = "http://54.148.252.140/cabinet/api/internal_audit/scan.php"
-    case IAScheduleLoad = "http://54.148.252.140/cabinet/api/internal_audit/load.php"
-    case IAScheduleSave = "http://54.148.252.140/cabinet/api/internal_audit/save.php"
+    case IALoadHost = "http://54.148.252.140/cabinet/api/internal_audit/load.php"
+    
+    case IASaveHost = "http://54.148.252.140/cabinet/api/internal_audit/save.php"
+    case IADeleteHost = "http://54.148.252.140/cabinet/api/internal_audit/delete.php"
         
 }
 

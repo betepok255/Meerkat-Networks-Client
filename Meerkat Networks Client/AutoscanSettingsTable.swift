@@ -17,7 +17,7 @@
 import UIKit
 import Alamofire
 
-class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource  {
+class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, EASchedulerDelegate  {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var editButton: UIBarButtonItem!
@@ -31,6 +31,11 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
     var hostIndex = -1
     var sDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     var timesScan: [[String]] = [[],[],[],[],[],[],[]]
+    // Request
+    var senderAudit = ""
+    var requestUrlLoad = ""
+    var requestUrlSave = ""
+    var postIdParameter = "" // "id" or "project"
     
     let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
@@ -62,9 +67,9 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
         
         self.myActivityIndicator.startAnimating()
         
-        let parameters = ["token": SingletonDB.sharedInstance.token, "id": String(hostID)]
+        let parameters = ["token": SingletonDB.sharedInstance.token, postIdParameter: String(hostID)]
         
-        Alamofire.request(.POST, APIUrl.EALoadHost.rawValue, parameters: parameters)
+        Alamofire.request(.POST, self.requestUrlLoad, parameters: parameters)
             .responseJSON { response in
                 self.myActivityIndicator.stopAnimating()
                 
@@ -149,9 +154,9 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
         self.state = stateSwitch.on ? "on" : "off"
         self.delegate?.HostStateChanged(self.hostIndex, state: self.state)
         
-        let parameters = ["token": SingletonDB.sharedInstance.token, "id": String(hostID), "state": self.state as String ]
+        let parameters = ["token": SingletonDB.sharedInstance.token, postIdParameter: String(hostID), "state": self.state as String ]
         
-        Alamofire.request(.POST, APIUrl.EASaveHost.rawValue, parameters: parameters)
+        Alamofire.request(.POST, self.requestUrlSave, parameters: parameters)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
@@ -160,10 +165,22 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
             viewController.hostId = self.hostID
             viewController.timesScan = self.timesScan
             viewController.hostState = self.state
+            viewController.requestUrlSave = self.requestUrlSave
+            viewController.postIdParameter = self.postIdParameter
+            viewController.EADelegate = self
         }
+    }
+    
+    func TimetableChanged(newTimetable: [[String]]) {
+        timesScan = newTimetable
+        
+        collectionView.reloadData()
     }
 }
 
+@objc protocol EASchedulerDelegate {
+    func TimetableChanged(newTimetable: [[String]])
+}
 
 
 

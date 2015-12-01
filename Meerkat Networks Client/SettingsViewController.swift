@@ -12,6 +12,8 @@ import Alamofire
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HostStateDelegate  {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var senderAudit = ""
     //    var hostUrl: [String] = ["Url 1", "Url 2"]
     //    var hostStatus: [String] = ["On", "Off"]
     
@@ -155,13 +157,15 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         if (segue.identifier == "EATimetableSegue") {
             let index = tableView.indexPathForSelectedRow!.row
             let host = hosts[index] as! NSDictionary
-            
-            print(host)
-            
+                        
             let viewController = segue.destinationViewController as! AutoscanSettingsTable
             viewController.hostID = host["id"] as! String
             viewController.state = host["autoscan"] as! String
             viewController.hostIndex = index
+            viewController.senderAudit = "EA"
+            viewController.requestUrlLoad = APIUrl.EALoadHost.rawValue
+            viewController.requestUrlSave = APIUrl.EASaveHost.rawValue
+            viewController.postIdParameter = "id"
             viewController.delegate = self
         }
     }

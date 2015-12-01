@@ -457,7 +457,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-l5-oOR">
-                                <rect key="frame" x="0.0" y="160" width="600" height="391"/>
+                                <rect key="frame" x="0.0" y="160" width="600" height="440"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="NaM-sw-7xT">
@@ -572,7 +572,7 @@
                                 </connections>
                             </segmentedControl>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-V3-P41">
-                                <rect key="frame" x="0.0" y="451" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="r6W-Tb-rxO"/>
@@ -583,7 +583,7 @@
                                 <locale key="locale" localeIdentifier="da"/>
                             </datePicker>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cLA-AY-ihf">
-                                <rect key="frame" x="0.0" y="137" width="600" height="306"/>
+                                <rect key="frame" x="0.0" y="137" width="600" height="355"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -964,7 +964,7 @@
                         <outlet property="tableView" destination="HTn-iI-7Yj" id="oVb-iD-mkT"/>
                         <segue destination="QEG-bK-Gxa" kind="show" identifier="ScanHostNowSegue" id="eHi-EN-jAS"/>
                         <segue destination="Aus-AY-HZ1" kind="show" identifier="AboutHost" id="ekf-Vz-VS6"/>
-                        <segue destination="60f-Hb-rB6" kind="show" identifier="Settings" id="gAJ-8a-7Dw"/>
+                        <segue destination="60f-Hb-rB6" kind="show" identifier="IASettingsSegue" id="gAJ-8a-7Dw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJ5-61-wIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1342,6 +1342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noU-On-ud8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="395" y="133"/>
         </scene>
         <!--Settings-->
         <scene sceneID="ErR-ZK-ION">
@@ -1516,7 +1517,7 @@
         <!--Information about host-->
         <scene sceneID="H7E-4X-QKS">
             <objects>
-                <viewController title="Information about host" id="Aus-AY-HZ1" sceneMemberID="viewController">
+                <viewController title="Information about host" id="Aus-AY-HZ1" customClass="AboutHostViewController" customModule="Meerkat_Networks_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c25-ih-7Bt"/>
                         <viewControllerLayoutGuide type="bottom" id="Avc-xy-a1s"/>
@@ -1524,9 +1525,59 @@
                     <view key="view" contentMode="scaleToFill" id="etr-Ld-ziN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jk8-FS-CyD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="2J5-HY-hvl" customClass="DetailCell" customModule="Meerkat_Networks_Client" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2J5-HY-hvl" id="sOX-PF-WRO">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSf-bC-cc4">
+                                                    <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyt-eb-h5z">
+                                                    <rect key="frame" x="8" y="34" width="584" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YSf-bC-cc4" secondAttribute="trailing" id="1kp-qq-Pdv"/>
+                                                <constraint firstItem="YSf-bC-cc4" firstAttribute="leading" secondItem="sOX-PF-WRO" secondAttribute="leadingMargin" id="DCQ-rI-L9E"/>
+                                                <constraint firstItem="uyt-eb-h5z" firstAttribute="leading" secondItem="sOX-PF-WRO" secondAttribute="leadingMargin" id="ibR-Ki-d30"/>
+                                                <constraint firstItem="YSf-bC-cc4" firstAttribute="top" secondItem="sOX-PF-WRO" secondAttribute="topMargin" id="lrQ-4X-Fa7"/>
+                                                <constraint firstItem="uyt-eb-h5z" firstAttribute="bottom" secondItem="sOX-PF-WRO" secondAttribute="bottomMargin" id="tcT-mb-Wyp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uyt-eb-h5z" secondAttribute="trailing" id="zeM-vf-NvC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="uyt-eb-h5z" id="mQG-UA-Bfy"/>
+                                            <outlet property="titleLabel" destination="YSf-bC-cc4" id="zT5-c7-vjP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jk8-FS-CyD" id="Djx-xB-tbm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esS-PY-wyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1609,7 +1660,7 @@
                                         <connections>
                                             <outlet property="labelStatus" destination="91E-fF-Rft" id="BeD-hl-2dk"/>
                                             <outlet property="labelUrl" destination="0Jg-e0-LBh" id="vE1-gc-3la"/>
-                                            <segue destination="ah5-0p-5cd" kind="show" id="OfB-o5-Dua"/>
+                                            <segue destination="ah5-0p-5cd" kind="show" identifier="IATimetableSegue" id="OfB-o5-Dua"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1638,6 +1689,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rO6-T6-1eG"/>
+        <segue reference="OfB-o5-Dua"/>
     </inferredMetricsTieBreakers>
 </document>

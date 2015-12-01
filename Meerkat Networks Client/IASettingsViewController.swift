@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
-class IASettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class IASettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HostStateDelegate  {
     
     @IBOutlet weak var tableView: UITableView!
-    var hostUrl: [String] = ["Url 1", "Url 2"]
-    var hostStatus: [String] = ["On", "Off"]
+    
+    var hosts: NSMutableArray = []
+    
+//    var hostUrl: [String] = ["Url 1", "Url 2"]
+//    var hostStatus: [String] = ["On", "Off"]
     
 //    @IBOutlet weak var editButton: UIBarButtonItem!
 //    
@@ -42,7 +46,7 @@ class IASettingsViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hostUrl.count
+        return hosts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -50,8 +54,10 @@ class IASettingsViewController: UIViewController, UITableViewDataSource, UITable
         
         cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
         
-        cell.labelUrl.text = hostUrl[indexPath.row]
-        cell.labelStatus.text = hostStatus[indexPath.row]
+        let host = hosts[indexPath.row] as! NSDictionary
+        
+        cell.labelUrl.text = host["host"] as? String
+        cell.labelStatus.text = host["autoscan"] as? String
         
         return cell
     }
@@ -60,15 +66,57 @@ class IASettingsViewController: UIViewController, UITableViewDataSource, UITable
         // Return false if you do not want the specified item to be editable.
         return true
     }
+//    
+////    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+////        if editingStyle == .Delete {
+////            hostUrl.removeAtIndex(indexPath.row)
+////            hostStatus.removeAtIndex(indexPath.row)
+////            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+////        } else if editingStyle == .Insert {
+////            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+////        }
+////    }
+//    
+//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//            
+//            let host = hosts[indexPath.row] as! NSDictionary
+//            
+//            let parameters = ["token": SingletonDB.sharedInstance.token, "ids": "[" + (host["id"] as! String) + "]" ]
+//            Alamofire.request(.POST, APIUrl.IADeleteHost.rawValue, parameters: parameters)
+//            
+//            hosts.removeObjectAtIndex(indexPath.row)
+//            
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//        } else if editingStyle == .Insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//        }
+//    }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            hostUrl.removeAtIndex(indexPath.row)
-            hostStatus.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        if (segue.identifier == "IATimetableSegue") {
+            let index = tableView.indexPathForSelectedRow!.row
+            let host = hosts[index] as! NSDictionary
+            
+            let viewController = segue.destinationViewController as! AutoscanSettingsTable
+            viewController.hostID = host["project"] as! String
+            viewController.state = host["autoscan"] as! String
+            viewController.hostIndex = index
+            viewController.senderAudit = "IA"
+            viewController.requestUrlLoad = APIUrl.IALoadHost.rawValue
+            viewController.requestUrlSave = APIUrl.IASaveHost.rawValue
+            viewController.postIdParameter = "project"
+            
+            viewController.delegate = self
         }
+    }
+    
+    func HostStateChanged(index: Int, state: String) {
+        let host = self.hosts[index]
+        host.setValue(state, forKey: "autoscan")
+        self.hosts.replaceObjectAtIndex(index, withObject: host)
+        
+        tableView.reloadData()
     }
     
 }

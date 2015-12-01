@@ -19,8 +19,11 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
     // Data
     var hostId = ""
     var hostState = ""
+    var requestUrlSave = ""
+    var postIdParameter = "" // "id" or "project"
     //    var sDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     var timesScan: [[String]] = [[],[],[],[],[],[],[]]
+    weak var EADelegate: EASchedulerDelegate?
     
     var activeDayTimes = [""]
     //    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
@@ -54,28 +57,29 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
         self.tableView.reloadData()
         
         self.SaveSchedule()
-        //        self.myActivityIndicator.center = self.view.center
-        //        view.addSubview(myActivityIndicator)
         
     }
     
     func SaveSchedule() {
-        let parameters = ["token": SingletonDB.sharedInstance.token, "id": self.hostId, "state": self.hostState as String, "data": self.convertTimescanToDataString().description]
+        let parameters = ["token": SingletonDB.sharedInstance.token, postIdParameter: self.hostId, "state": self.hostState as String, "data": self.convertTimescanToDataString().description]
         
-        print(parameters)
-        Alamofire.request(.POST, APIUrl.EASaveHost.rawValue, parameters: parameters)
+        self.EADelegate?.TimetableChanged(timesScan)
+        
+        Alamofire.request(.POST, requestUrlSave, parameters: parameters)
     }
     
     func convertTimescanToDataString() -> [[String]] {
+        // FIX: Monday / Sunday
         var arrForSave: [[String]] = [[],[],[],[],[],[],[]]
-        arrForSave[0] = timesScan[1]
-        arrForSave[1] = timesScan[2]
-        arrForSave[2] = timesScan[3]
-        arrForSave[3] = timesScan[4]
-        arrForSave[4] = timesScan[5]
-        arrForSave[5] = timesScan[6]
-        arrForSave[6] = timesScan[0]
-        
+        for var i = 0; i < arrForSave.count; i++ {
+            if i + 1 != 7 {
+                arrForSave[i] = timesScan[i+1]
+            } else {
+                arrForSave[i] = timesScan[0]
+            }
+            
+        } //
+                
         var converted: [[String]] = []
         
         for var i = 0; i < arrForSave.count; i++ {
@@ -125,9 +129,13 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
             timesScan[segmentControl.selectedSegmentIndex].removeAtIndex(indexPath.row)
             activeDayTimes = timesScan[segmentControl.selectedSegmentIndex]
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            SaveSchedule()
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
+    
     
 }

@@ -22,6 +22,7 @@
 		56320EC11BFCB06F0076CB7A /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56320EBE1BFCB06F0076CB7A /* FontAwesome.swift */; };
 		563984F51C04B77000A5CA39 /* VulnerabilitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563984F41C04B77000A5CA39 /* VulnerabilitiesViewController.swift */; };
 		563984F71C04B7D200A5CA39 /* VulnerabilityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563984F61C04B7D200A5CA39 /* VulnerabilityListCell.swift */; };
+		5647761A1C0DC29100CB367D /* IASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564776191C0DC29100CB367D /* IASettingsViewController.swift */; };
 		5663E10D1BF4DD690069C0DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10C1BF4DD690069C0DE /* AppDelegate.swift */; };
 		5663E10F1BF4DD690069C0DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663E10E1BF4DD690069C0DE /* LoginViewController.swift */; };
 		5663E1121BF4DD690069C0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5663E1101BF4DD690069C0DE /* Main.storyboard */; };
@@ -44,11 +45,10 @@
 		56DA40261BF77E9700FB65D5 /* DLHamburguerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40201BF77E9700FB65D5 /* DLHamburguerViewController.swift */; };
 		56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */; };
 		56DA40351BF79C1B00FB65D5 /* EAIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA40341BF79C1B00FB65D5 /* EAIndex.swift */; };
-		56E5C3151C084E5300417E6E /* IASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C3141C084E5300417E6E /* IASettingsViewController.swift */; };
 		56E5C31A1C08519A00417E6E /* AboutHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C3191C08519A00417E6E /* AboutHostViewController.swift */; };
 		56E5C31C1C0851AC00417E6E /* ScanNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C31B1C0851AC00417E6E /* ScanNowViewController.swift */; };
 		56E5C31E1C0851BE00417E6E /* ScanNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C31D1C0851BE00417E6E /* ScanNowCell.swift */; };
-		56E5C3201C0851CC00417E6E /* AboutHostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C31F1C0851CC00417E6E /* AboutHostCell.swift */; };
+		56E5C3201C0851CC00417E6E /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5C31F1C0851CC00417E6E /* DetailCell.swift */; };
 		56EAD1991BFF338C00168CDC /* WeektableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EAD1981BFF338C00168CDC /* WeektableCollectionViewCell.swift */; };
 		56F2FCA91BFE0A4B00F7AC00 /* MyEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F2FCA81BFE0A4B00F7AC00 /* MyEnums.swift */; };
 /* End PBXBuildFile section */
@@ -155,6 +155,7 @@
 		56320EBE1BFCB06F0076CB7A /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
 		563984F41C04B77000A5CA39 /* VulnerabilitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VulnerabilitiesViewController.swift; sourceTree = "<group>"; };
 		563984F61C04B7D200A5CA39 /* VulnerabilityListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VulnerabilityListCell.swift; sourceTree = "<group>"; };
+		564776191C0DC29100CB367D /* IASettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IASettingsViewController.swift; sourceTree = "<group>"; };
 		5663E1091BF4DD690069C0DE /* Meerkat Networks Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meerkat Networks Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663E10C1BF4DD690069C0DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5663E10E1BF4DD690069C0DE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -184,11 +185,10 @@
 		56DA402A1BF78B1D00FB65D5 /* HostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostListViewController.swift; sourceTree = "<group>"; };
 		56DA40341BF79C1B00FB65D5 /* EAIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EAIndex.swift; sourceTree = "<group>"; };
 		56DB2B641C089B2400C13BC7 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
-		56E5C3141C084E5300417E6E /* IASettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IASettingsViewController.swift; sourceTree = "<group>"; };
 		56E5C3191C08519A00417E6E /* AboutHostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutHostViewController.swift; sourceTree = "<group>"; };
 		56E5C31B1C0851AC00417E6E /* ScanNowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanNowViewController.swift; sourceTree = "<group>"; };
 		56E5C31D1C0851BE00417E6E /* ScanNowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanNowCell.swift; sourceTree = "<group>"; };
-		56E5C31F1C0851CC00417E6E /* AboutHostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutHostCell.swift; sourceTree = "<group>"; };
+		56E5C31F1C0851CC00417E6E /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		56EAD1981BFF338C00168CDC /* WeektableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeektableCollectionViewCell.swift; sourceTree = "<group>"; };
 		56F2FCA81BFE0A4B00F7AC00 /* MyEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,6 +249,23 @@
 			name = Vulnerabilities;
 			sourceTree = "<group>";
 		};
+		564776171C0DC24F00CB367D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				56290B151BFA32C90095BC3D /* SettingsViewController.swift */,
+				56290B111BFA30360095BC3D /* SettingsListCell.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		564776181C0DC28200CB367D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				564776191C0DC29100CB367D /* IASettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		5663E1001BF4DD690069C0DE = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +294,7 @@
 				56DA40281BF77EB000FB65D5 /* Menu */,
 				56DA40271BF77E9F00FB65D5 /* Login */,
 				56DA401A1BF77E1600FB65D5 /* Home */,
+				56F2FCCB1BFE1E3600F7AC00 /* EA-IA Weektable */,
 				56DA402C1BF78FB000FB65D5 /* External Audit */,
 				56DA402D1BF78FC500FB65D5 /* Internal Audit */,
 				56DA40361BF79C5500FB65D5 /* Web Security */,
@@ -365,8 +383,8 @@
 			children = (
 				56DA40341BF79C1B00FB65D5 /* EAIndex.swift */,
 				56EAD1971BFF193600168CDC /* Scan Host */,
-				56F2FCCB1BFE1E3600F7AC00 /* Settings */,
 				56F2FCAA1BFE14E100F7AC00 /* History */,
+				564776171C0DC24F00CB367D /* Settings */,
 			);
 			name = "External Audit";
 			sourceTree = "<group>";
@@ -374,13 +392,13 @@
 		56DA402D1BF78FC500FB65D5 /* Internal Audit */ = {
 			isa = PBXGroup;
 			children = (
+				56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */,
+				564776181C0DC28200CB367D /* Settings */,
 				56E5C3181C08517B00417E6E /* Scan now */,
 				56E5C3171C08516A00417E6E /* About host */,
-				56E5C3161C08515C00417E6E /* Settings */,
 				563984F31C04B75400A5CA39 /* Vulnerabilities */,
 				56C068851C03811D0091D9E6 /* Components */,
 				56C068861C0381260091D9E6 /* Groups */,
-				56290B0B1BF9FE3A0095BC3D /* IAIndexViewController.swift */,
 			);
 			name = "Internal Audit";
 			sourceTree = "<group>";
@@ -443,19 +461,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56E5C3161C08515C00417E6E /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				56E5C3141C084E5300417E6E /* IASettingsViewController.swift */,
-			);
-			name = Settings;
-			sourceTree = "<group>";
-		};
 		56E5C3171C08516A00417E6E /* About host */ = {
 			isa = PBXGroup;
 			children = (
 				56E5C3191C08519A00417E6E /* AboutHostViewController.swift */,
-				56E5C31F1C0851CC00417E6E /* AboutHostCell.swift */,
+				56E5C31F1C0851CC00417E6E /* DetailCell.swift */,
 			);
 			name = "About host";
 			sourceTree = "<group>";
@@ -503,15 +513,13 @@
 			name = History;
 			sourceTree = "<group>";
 		};
-		56F2FCCB1BFE1E3600F7AC00 /* Settings */ = {
+		56F2FCCB1BFE1E3600F7AC00 /* EA-IA Weektable */ = {
 			isa = PBXGroup;
 			children = (
 				56EAD19B1BFF33FF00168CDC /* Schedule */,
 				56EAD19A1BFF33F200168CDC /* Weektable */,
-				56290B151BFA32C90095BC3D /* SettingsViewController.swift */,
-				56290B111BFA30360095BC3D /* SettingsListCell.swift */,
 			);
-			name = Settings;
+			name = "EA-IA Weektable";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -714,6 +722,7 @@
 				5613A1B91C0755FD00C3E096 /* SubmenuViewController.swift in Sources */,
 				56C068841C0380B70091D9E6 /* GroupsViewController.swift in Sources */,
 				56DA40251BF77E9700FB65D5 /* DLHamburguerNavigationController.swift in Sources */,
+				5647761A1C0DC29100CB367D /* IASettingsViewController.swift in Sources */,
 				56290B121BFA30360095BC3D /* SettingsListCell.swift in Sources */,
 				56290B101BFA26B20095BC3D /* HistoryListCell.swift in Sources */,
 				56E5C31A1C08519A00417E6E /* AboutHostViewController.swift in Sources */,
@@ -723,7 +732,7 @@
 				56290B161BFA32C90095BC3D /* SettingsViewController.swift in Sources */,
 				56E5C31C1C0851AC00417E6E /* ScanNowViewController.swift in Sources */,
 				56B9D7121C0A357B00528C2E /* MyExtensions.swift in Sources */,
-				56E5C3201C0851CC00417E6E /* AboutHostCell.swift in Sources */,
+				56E5C3201C0851CC00417E6E /* DetailCell.swift in Sources */,
 				56E5C31E1C0851BE00417E6E /* ScanNowCell.swift in Sources */,
 				56290B1A1BFA37EF0095BC3D /* AutoscanSettingsTable.swift in Sources */,
 				56290B141BFA31750095BC3D /* ScanHostViewController.swift in Sources */,
@@ -738,7 +747,6 @@
 				56320EBF1BFCB06F0076CB7A /* Enum.swift in Sources */,
 				56320EC11BFCB06F0076CB7A /* FontAwesome.swift in Sources */,
 				56DA402B1BF78B1D00FB65D5 /* HostListViewController.swift in Sources */,
-				56E5C3151C084E5300417E6E /* IASettingsViewController.swift in Sources */,
 				56C0687E1C032B080091D9E6 /* SheduleViewController.swift in Sources */,
 				56290B0C1BF9FE3A0095BC3D /* IAIndexViewController.swift in Sources */,
 				56C068881C03813E0091D9E6 /* GroupsListCell.swift in Sources */,

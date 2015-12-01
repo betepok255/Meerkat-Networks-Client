@@ -26,6 +26,7 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
         ["Access policies","File permissions","Environment Configuration","Benchmark"],
         ["Vulnerable functions","SQL injections"]
     ]
+    var hosts: NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,7 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
         
         submenuButton.titleLabel?.font = UIFont.fontAwesomeOfSize(14)
         submenuButton.setTitle(String.fontAwesomeIconWithName(FontAwesome.EllipsisV), forState: .Normal)
-                
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +53,7 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
             self.performSegueWithIdentifier("ScanHostNowSegue", sender: self)
             break;
         case 1:
-            self.performSegueWithIdentifier("Settings", sender: self)
+            self.performSegueWithIdentifier("IASettingsSegue", sender: self)
             break;
         case 2:
             self.performSegueWithIdentifier("AboutHost", sender: self)
@@ -93,10 +94,16 @@ class ComponentsViewController: UIViewController, UITableViewDataSource, UITable
             let controller = segue.destinationViewController as! ScanNowViewController
             controller.hostId = self.hostId
             controller.projectId = self.projectId
-            
+        } else if(segue.identifier == "IASettingsSegue") {
+            let controller = segue.destinationViewController as! IASettingsViewController
+            controller.hosts = self.hosts
+        } else if(segue.identifier == "AboutHost") {
+            let controller = segue.destinationViewController as! AboutHostViewController
+            controller.projectId = self.projectId
+            print(self.projectId)
         }
     }
-
+    
 }
 
 @objc protocol SubmenuSelectedDelegate {

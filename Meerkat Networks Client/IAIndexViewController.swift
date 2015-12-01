@@ -16,8 +16,8 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
     
     let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
-    var hosts: NSMutableDictionary = NSMutableDictionary()
-    var hostNames: [String] = ["Host 1", "Host 2", "Host 3", "Host 4"]
+    var hosts: NSMutableArray = []
+//    var hostNames: [String] = ["Host 1", "Host 2", "Host 3", "Host 4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +41,14 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
                 
                 if (response.response?.statusCode == 200){
                     self.hosts.removeAllObjects()
-                    let dict = response.result.value as! NSArray
+                    
+                    let dict = response.result.value as! NSMutableArray
+                    var mutableElem = NSMutableDictionary()
                     for var i = 0; i < dict.count; i++ {
-                        self.hosts.setValue(dict[i], forKey: String(i))
+                        mutableElem = NSMutableDictionary(dictionary: dict[i] as! [NSObject : AnyObject])
+                        self.hosts.addObject(mutableElem)
                     }
                     
-//                    self.hosts = response.result.value
-                    print(self.hosts)
                     self.tableView.reloadData()
                 } else {
                     let alert = UIAlertController(title: "Error", message: "Request error.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -79,10 +80,9 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
         
         cell.addBorderBottom(size: 1, color: UIColor.lightGrayColor())
         
-        let host = hosts.valueForKey(String(indexPath.row))!
+        let host = hosts[indexPath.row] as! NSDictionary
         
         cell.textLabel!.text = host["host"] as? String
-        //        cell.textLabel!.text = hostNames[indexPath.row]
         
         cell.imageView!.image = UIImage.fontAwesomeIconWithName(FontAwesome.CheckCircle, textColor: UIColor.greenColor(), size: CGSizeMake(30, 30))
         
@@ -93,14 +93,20 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         if (segue.identifier == "ComponentsSegue") {
             let index = tableView.indexPathForSelectedRow!.row
-            let viewController = segue.destinationViewController as! ComponentsViewController
+            let controller = segue.destinationViewController as! ComponentsViewController
             
-            let host = hosts.valueForKey(String(index))!
+            let host = hosts[index] as! NSDictionary
             
-            viewController.hostName = (host["host"] as? String)!
-            viewController.hostId = (host["id"] as? String)!
-            viewController.projectId = (host["project"] as? String)!
+            controller.hostName = (host["host"] as? String)!
+            controller.hostId = (host["id"] as? String)!
+            controller.projectId = (host["project"] as? String)!
+            controller.hosts = self.hosts
+            
         }
+//        else if(segue.identifier == "IASettingsSegue") {
+//            let controller = segue.destinationViewController as! IASettingsViewController
+//
+//        }
     }
     
 }
