@@ -15,23 +15,6 @@ class IASettingsViewController: UIViewController, UITableViewDataSource, UITable
     
     var hosts: NSMutableArray = []
     
-//    var hostUrl: [String] = ["Url 1", "Url 2"]
-//    var hostStatus: [String] = ["On", "Off"]
-    
-//    @IBOutlet weak var editButton: UIBarButtonItem!
-//    
-//    @IBAction func doEdit(sender: AnyObject) {
-//        
-//        if (self.tableView.editing) {
-//            editButton.title = "Edit"
-//            self.tableView.setEditing(false, animated: true)
-//            //            self.tableView.s
-//        } else {
-//            editButton.title = "Done"
-//            self.tableView.setEditing(true, animated: true)
-//        }
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -58,6 +41,11 @@ class IASettingsViewController: UIViewController, UITableViewDataSource, UITable
         
         cell.labelUrl.text = host["host"] as? String
         cell.labelStatus.text = host["autoscan"] as? String
+        if String(host["autoscan"]!) == "on" || String(host["autoscan"]!) == "On" {
+            cell.labelStatus.textColor = UIColor.init(hex: MNColor.Green.rawValue)
+        } else {
+            cell.labelStatus.textColor = UIColor.init(hex: MNColor.Red.rawValue)
+        }
         
         return cell
     }
@@ -66,32 +54,6 @@ class IASettingsViewController: UIViewController, UITableViewDataSource, UITable
         // Return false if you do not want the specified item to be editable.
         return true
     }
-//    
-////    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-////        if editingStyle == .Delete {
-////            hostUrl.removeAtIndex(indexPath.row)
-////            hostStatus.removeAtIndex(indexPath.row)
-////            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-////        } else if editingStyle == .Insert {
-////            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-////        }
-////    }
-//    
-//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == .Delete {
-//            
-//            let host = hosts[indexPath.row] as! NSDictionary
-//            
-//            let parameters = ["token": SingletonDB.sharedInstance.token, "ids": "[" + (host["id"] as! String) + "]" ]
-//            Alamofire.request(.POST, APIUrl.IADeleteHost.rawValue, parameters: parameters)
-//            
-//            hosts.removeObjectAtIndex(indexPath.row)
-//            
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//        } else if editingStyle == .Insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//        }
-//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         if (segue.identifier == "IATimetableSegue") {

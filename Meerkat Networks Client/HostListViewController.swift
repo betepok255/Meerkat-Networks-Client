@@ -16,11 +16,6 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
-//    var hostNames: [String] = ["Host 1", "Host 2", "Host 3", "Host 4"]
-//    var hostIps: [String] = ["52.58.119.202","52.58.119.202","52.58.119.202","52.58.119.202"]
-//    var hostStatuses: [Bool] = [true,false,true,false]
-//    var hostDates: [String] = ["02/08/2016","02/08/2016","02/08/2016","02/08/2016"]
-    
     var hosts: AnyObject? = []
     
     override func viewDidLoad() {
@@ -44,10 +39,9 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
                 
                 if (response.response?.statusCode == 200){
                     self.hosts = response.result.value
-//                    print(self.hosts![0])
                     self.tableView.reloadData()
                 } else {
-                    let alert = UIAlertController(title: "Error", message: "Login or password incorrect!", preferredStyle: UIAlertControllerStyle.Alert)
+                    let alert = UIAlertController(title: "Error", message: "Request error.", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
@@ -78,8 +72,14 @@ class HostListViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.labelHost.text = String(host["name"]!)
         cell.labelIp.text = String(host["ip"]!)
         
-        let dateString = String(host["exp_date"]!)
-        cell.labelDate.text = dateString
+        let dateString = String(host["exp_date"]!) // "y.MM.dd HH:mm:ss"
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "y.MM.dd HH:mm:ss"
+        let date = formatter.dateFromString(dateString)!
+        formatter.dateFormat = "dd/MM/y"
+        formatter.stringFromDate(date)
+        
+        cell.labelDate.text = formatter.stringFromDate(date)
         
         if String(host["connected"]!) == "1" {
             cell.labelIsConnected.text = "Connected"

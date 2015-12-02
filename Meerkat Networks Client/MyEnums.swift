@@ -22,17 +22,16 @@ public enum MNColor: Int {
     case CyanDark = 0x4285F4
     
     case MNC = 0x007AA3
-//    case Green = ""
 }
 
-//public extension UIColor {
-//    convenience init(hex : Int) {
-//        let blue = CGFloat(hex & 0xFF)
-//        let green = CGFloat((hex >> 8) & 0xFF)
-//        let red = CGFloat((hex >> 16) & 0xFF)
-//        self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1)
-//    }
-//}
+public extension UIColor {
+    convenience init(hex : Int) {
+        let blue = CGFloat(hex & 0xFF)
+        let green = CGFloat((hex >> 8) & 0xFF)
+        let red = CGFloat((hex >> 16) & 0xFF)
+        self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1)
+    }
+}
 
 
 

@@ -19,8 +19,6 @@ class AboutHostViewController: UIViewController, UITableViewDataSource, UITableV
     var descriptions: [[String]] = [[],[],[],[]]
     let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
-//    var hosts: NSMutableDictionary = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -52,9 +50,11 @@ class AboutHostViewController: UIViewController, UITableViewDataSource, UITableV
                         var nTitle: [String] = []
                         var nDesc: [String] = []
                         
-                        for (key2, value2) in value as! NSDictionary {
-                            nTitle.append(key2 as! String)
-                            nDesc.append(value2 as! String)
+                        if let extra = value as? NSDictionary {
+                            for (key2, value2) in extra {
+                                nTitle.append(key2 as! String)
+                                nDesc.append(value2 as! String)
+                            }
                         }
                         
                         self.titles.append(nTitle)

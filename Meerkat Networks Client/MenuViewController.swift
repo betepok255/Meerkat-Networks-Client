@@ -111,20 +111,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     // Profile Menu
                     switch indexPath.row
                     {
-                    case 0:
-                        let nav = self.storyboard?.instantiateViewControllerWithIdentifier("HostListNavigationViewController") as! DLHamburguerNavigationController
-                        hamburguerViewController.contentViewController = nav
+                    case 3:
+                        exit(0)
                         break
                     default:
                         break
                     }
                     self.profileMenuSelection = indexPath.row
                 }
-                // switch...
-                
-                
-//                nvc.visibleViewController!.performSegueWithIdentifier(self.segues[indexPath.row], sender: nil)
-//                hamburguerViewController.contentViewController = nvc
             })
         }
     }

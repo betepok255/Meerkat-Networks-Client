@@ -21,12 +21,10 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
     var hostState = ""
     var requestUrlSave = ""
     var postIdParameter = "" // "id" or "project"
-    //    var sDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     var timesScan: [[String]] = [[],[],[],[],[],[],[]]
     weak var EADelegate: EASchedulerDelegate?
     
     var activeDayTimes = [""]
-    //    let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +54,7 @@ class SheduleViewController: UIViewController, UITableViewDataSource, UITableVie
         self.activeDayTimes = self.timesScan[self.segmentControl.selectedSegmentIndex]
         self.tableView.reloadData()
         
-        self.SaveSchedule()
-        
+        self.SaveSchedule()        
     }
     
     func SaveSchedule() {

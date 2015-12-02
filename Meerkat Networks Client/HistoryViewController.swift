@@ -43,7 +43,6 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
                 
                 if (response.response?.statusCode == 200){
                     self.hosts = response.result.value
-//                    print(self.hosts![0])
                     self.tableView.reloadData()
                 } else {
                     let alert = UIAlertController(title: "Error", message: "Request error.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -75,14 +74,30 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         let host: NSDictionary = (hosts![indexPath.row] as? NSDictionary)!
         
         cell.labelUrl.text = String(host["host"]!)
+        
         cell.labelCritical.text = String(host["crit"]!)
-//        if hostCritical[indexPath.row] != "0" {
-//            let color = UIColor(MNColor.Red)
-//            cell.labelCritical.textColor = color
-//        } else {
-//        }
+        if String(host["crit"]!) == "0" {
+            cell.labelCritical.textColor = UIColor.init(hex: MNColor.Green.rawValue)
+        } else {
+            cell.labelCritical.textColor = UIColor.init(hex: MNColor.Red.rawValue)
+        }
+        
         cell.labelInformational.text = String(host["info"]!)
-        cell.labelDate.text = String(host["date"]!)
+        if String(host["info"]!) == "0" {
+            cell.labelInformational.textColor = UIColor.init(hex: MNColor.Green.rawValue)
+        } else {
+            cell.labelInformational.textColor = UIColor.init(hex: MNColor.Red.rawValue)
+        }
+        
+        let dateString = String(host["date"]!) // "y.MM.dd HH:mm:ss"
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "y.MM.dd HH:mm:ss"
+        let date = formatter.dateFromString(dateString)!
+        formatter.dateFormat = "dd.MM.y"
+        formatter.stringFromDate(date)
+        
+        cell.labelDate.text = formatter.stringFromDate(date)
+        
         cell.imageIcon.image = UIImage.fontAwesomeIconWithName(.InfoCircle, textColor: UIColor.grayColor(), size: CGSizeMake(28, 28))
                 
         return cell

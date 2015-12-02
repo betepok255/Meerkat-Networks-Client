@@ -17,7 +17,6 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
     let myActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
     var hosts: NSMutableArray = []
-//    var hostNames: [String] = ["Host 1", "Host 2", "Host 3", "Host 4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,10 +102,6 @@ class IAIndexViewController: UIViewController, UITableViewDataSource, UITableVie
             controller.hosts = self.hosts
             
         }
-//        else if(segue.identifier == "IASettingsSegue") {
-//            let controller = segue.destinationViewController as! IASettingsViewController
-//
-//        }
     }
     
 }

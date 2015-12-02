@@ -54,14 +54,6 @@ class AutoscanSettingsTable: UIViewController, UICollectionViewDelegateFlowLayou
         collectionView!.dataSource = self
         collectionView!.delegate = self
         
-//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-//        layout.itemSize = CGSize(width: 90, height: 90)
-//        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-//        collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
-//        collectionView!.backgroundColor = UIColor.whiteColor()
-//        self.view.addSubview(collectionView!)
-        
         self.myActivityIndicator.center = self.view.center
         view.addSubview(myActivityIndicator)
         

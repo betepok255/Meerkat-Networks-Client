@@ -14,8 +14,6 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     var senderAudit = ""
-    //    var hostUrl: [String] = ["Url 1", "Url 2"]
-    //    var hostStatus: [String] = ["On", "Off"]
     
     // TEMPLATE:    let host = hosts.valueForKey(String(indexPath.row))!
     
@@ -58,6 +56,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.labelUrl.text = host["host"] as? String
         cell.labelStatus.text = host["autoscan"] as? String
+        if String(host["autoscan"]!) == "on" || String(host["autoscan"]!) == "On" {
+            cell.labelStatus.textColor = UIColor.init(hex: MNColor.Green.rawValue)
+        } else {
+            cell.labelStatus.textColor = UIColor.init(hex: MNColor.Red.rawValue)
+        }
         
         return cell
     }
